@@ -65,14 +65,16 @@
 		30B4D7DB1FDB8EA200124267 /* xpc_handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B4D7C41FDB8EA200124267 /* xpc_handshake.c */; };
 		30B4D7DD1FDB8FFB00124267 /* async_wake_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B4D7DC1FDB8FFB00124267 /* async_wake_strategy.m */; };
 		30B6B13A1FE171F000350819 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B6B1391FE171F000350819 /* MapKit.framework */; };
+		30B6DA2C20D172C7008BFF78 /* empty_list_sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B6DA2620D172C6008BFF78 /* empty_list_sploit.c */; };
+		30B6DA2D20D172C7008BFF78 /* empty_list_kmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 30B6DA2720D172C6008BFF78 /* empty_list_kmem.c */; };
+		30B6DA2E20D172C7008BFF78 /* empty_list_offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B6DA2A20D172C7008BFF78 /* empty_list_offsets.m */; };
+		30B6DA3120D17357008BFF78 /* empty_list_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B6DA2F20D17357008BFF78 /* empty_list_strategy.m */; };
 		30C1E0E41FCA846500C06609 /* IconsRenamerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C1E0E31FCA846500C06609 /* IconsRenamerViewController.m */; };
 		30CE8DA720C4654E00D55E13 /* multi_path_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CE8DA520C4654E00D55E13 /* multi_path_strategy.m */; };
 		30D5C0BA209FB3BA00566A55 /* BlankIconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5C0B9209FB3B900566A55 /* BlankIconsViewController.m */; };
-		30D5C0BE209FE15000566A55 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30D5C0BD209FE15000566A55 /* test.txt */; };
 		30D5C0C0209FEA0000566A55 /* WidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5C0BF209FEA0000566A55 /* WidgetsViewController.m */; };
 		30D5C0C420A130B500566A55 /* PreviewWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5C0C320A130B500566A55 /* PreviewWidgetViewController.m */; };
 		30D5C0C720A1320B00566A55 /* WidgetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5C0C620A1320B00566A55 /* WidgetObject.m */; };
-		30D946D5209D622600E40E57 /* upper_echelon_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D946D4209D622600E40E57 /* upper_echelon_strategy.m */; };
 		30D9474F209D65F200E40E57 /* libthreadexec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D9474E209D65F200E40E57 /* libthreadexec.a */; };
 		30DE0A9E1FD7405A0036BA97 /* ColorizeBadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE0A9D1FD7405A0036BA97 /* ColorizeBadgesViewController.m */; };
 		30E00A111FC6681E008EAABE /* jailbreakd in Resources */ = {isa = PBXBuildFile; fileRef = 30E00A101FC6681E008EAABE /* jailbreakd */; };
@@ -226,20 +228,24 @@
 		30B4D7C51FDB8EA200124267 /* xpc_handshake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xpc_handshake.h; sourceTree = "<group>"; };
 		30B4D7DC1FDB8FFB00124267 /* async_wake_strategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = async_wake_strategy.m; sourceTree = "<group>"; };
 		30B6B1391FE171F000350819 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		30B6DA2620D172C6008BFF78 /* empty_list_sploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = empty_list_sploit.c; sourceTree = "<group>"; };
+		30B6DA2720D172C6008BFF78 /* empty_list_kmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = empty_list_kmem.c; sourceTree = "<group>"; };
+		30B6DA2820D172C6008BFF78 /* empty_list_sploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_sploit.h; sourceTree = "<group>"; };
+		30B6DA2920D172C7008BFF78 /* empty_list_offsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_offsets.h; sourceTree = "<group>"; };
+		30B6DA2A20D172C7008BFF78 /* empty_list_offsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = empty_list_offsets.m; sourceTree = "<group>"; };
+		30B6DA2B20D172C7008BFF78 /* empty_list_kmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_kmem.h; sourceTree = "<group>"; };
+		30B6DA2F20D17357008BFF78 /* empty_list_strategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = empty_list_strategy.m; sourceTree = "<group>"; };
+		30B6DA3020D17357008BFF78 /* empty_list_strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = empty_list_strategy.h; sourceTree = "<group>"; };
 		30C1E0E31FCA846500C06609 /* IconsRenamerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconsRenamerViewController.m; sourceTree = "<group>"; };
 		30CE8DA520C4654E00D55E13 /* multi_path_strategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = multi_path_strategy.m; sourceTree = "<group>"; };
 		30CE8DA620C4654E00D55E13 /* multi_path_strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi_path_strategy.h; sourceTree = "<group>"; };
 		30D5C0B9209FB3B900566A55 /* BlankIconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankIconsViewController.m; sourceTree = "<group>"; };
-		30D5C0BD209FE15000566A55 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		30D5C0BF209FEA0000566A55 /* WidgetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetsViewController.m; sourceTree = "<group>"; };
 		30D5C0C220A130B500566A55 /* PreviewWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewWidgetViewController.h; sourceTree = "<group>"; };
 		30D5C0C320A130B500566A55 /* PreviewWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewWidgetViewController.m; sourceTree = "<group>"; };
 		30D5C0C520A131B800566A55 /* WidgetObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetObject.h; sourceTree = "<group>"; };
 		30D5C0C620A1320B00566A55 /* WidgetObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetObject.m; sourceTree = "<group>"; };
 		30D5C0FD20A147C000566A55 /* libobjc.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libobjc.tbd; sourceTree = DEVELOPER_DIR; };
-		30D5C10720A147D500566A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30D946D3209D622600E40E57 /* upper_echelon_strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upper_echelon_strategy.h; sourceTree = "<group>"; };
-		30D946D4209D622600E40E57 /* upper_echelon_strategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = upper_echelon_strategy.m; sourceTree = "<group>"; };
 		30D946DA209D62BD00E40E57 /* houdini.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = houdini.entitlements; sourceTree = "<group>"; };
 		30D9474E209D65F200E40E57 /* libthreadexec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libthreadexec.a; path = houdini/libthreadexec.a; sourceTree = "<group>"; };
 		30DE0A9D1FD7405A0036BA97 /* ColorizeBadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorizeBadgesViewController.m; sourceTree = "<group>"; };
@@ -338,10 +344,10 @@
 				30B4D6DF1FDA268300124267 /* triple_fetch_strategy.m */,
 				7543BEA51FDF62F50006745F /* async_wake_strategy.h */,
 				30B4D7DC1FDB8FFB00124267 /* async_wake_strategy.m */,
-				30D946D3209D622600E40E57 /* upper_echelon_strategy.h */,
-				30D946D4209D622600E40E57 /* upper_echelon_strategy.m */,
 				30CE8DA620C4654E00D55E13 /* multi_path_strategy.h */,
 				30CE8DA520C4654E00D55E13 /* multi_path_strategy.m */,
+				30B6DA3020D17357008BFF78 /* empty_list_strategy.h */,
+				30B6DA2F20D17357008BFF78 /* empty_list_strategy.m */,
 				308C000D1FCA0F11007EF741 /* utilities */,
 				30777F641FD46F7E0078A18D /* UIImage+Private.h */,
 			);
@@ -465,6 +471,19 @@
 			path = liboxpc;
 			sourceTree = "<group>";
 		};
+		30B6DA2520D1728F008BFF78 /* empty_list */ = {
+			isa = PBXGroup;
+			children = (
+				30B6DA2720D172C6008BFF78 /* empty_list_kmem.c */,
+				30B6DA2B20D172C7008BFF78 /* empty_list_kmem.h */,
+				30B6DA2920D172C7008BFF78 /* empty_list_offsets.h */,
+				30B6DA2A20D172C7008BFF78 /* empty_list_offsets.m */,
+				30B6DA2620D172C6008BFF78 /* empty_list_sploit.c */,
+				30B6DA2820D172C6008BFF78 /* empty_list_sploit.h */,
+			);
+			path = empty_list;
+			sourceTree = "<group>";
+		};
 		30C1E0EC1FCBA41400C06609 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,14 +497,6 @@
 				308EDE691FCCE03A00062EEA /* libz.1.1.3.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		30D5C10520A147D500566A55 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				30D5C10720A147D500566A55 /* Info.plist */,
-			);
-			path = test;
 			sourceTree = "<group>";
 		};
 		30F236021FBFB67500EC8799 /* View Controllers */ = {
@@ -553,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				B0CFEB171EEEEDD900310825 /* houdini */,
-				30D5C10520A147D500566A55 /* test */,
 				B0CFEB161EEEEDD900310825 /* Products */,
 				30C1E0EC1FCBA41400C06609 /* Frameworks */,
 			);
@@ -575,6 +585,7 @@
 				302A93431FFB424E00B44575 /* custom_hosts */,
 				308EDE681FCCE01700062EEA /* other */,
 				7543BE7D1FDF5F630006745F /* async_wake */,
+				30B6DA2520D1728F008BFF78 /* empty_list */,
 				307FE70F20C7638B007AC550 /* multi_path */,
 				30B4D7971FDB8EA100124267 /* triple_fetch */,
 				3059558F1FBE707800542538 /* houdini */,
@@ -583,7 +594,6 @@
 				B0CFEB1C1EEEEDD900310825 /* AppDelegate.m */,
 				B0CFEB211EEEEDD900310825 /* Main.storyboard */,
 				B0CFEB241EEEEDD900310825 /* Assets.xcassets */,
-				30D5C0BD209FE15000566A55 /* test.txt */,
 				30E00A101FC6681E008EAABE /* jailbreakd */,
 				302A933B1FFB0DF300B44575 /* uicache */,
 				B0CFEB291EEEEDD900310825 /* Info.plist */,
@@ -633,7 +643,7 @@
 				TargetAttributes = {
 					B0CFEB141EEEEDD900310825 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = LTZQ9BU56B;
+						DevelopmentTeam = D34X7XXW5V;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -686,7 +696,6 @@
 				B0CFEB251EEEEDD900310825 /* Assets.xcassets in Resources */,
 				303EE0551FD62F420008EAA8 /* keypad_button.png in Resources */,
 				30E00A111FC6681E008EAABE /* jailbreakd in Resources */,
-				30D5C0BE209FE15000566A55 /* test.txt in Resources */,
 				B0CFEB231EEEEDD900310825 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,7 +715,6 @@
 				308C000C1FCA0F01007EF741 /* display.m in Sources */,
 				30B4D7D31FDB8EA200124267 /* patch_amfid.c in Sources */,
 				30F236111FBFDEB900EC8799 /* ViewPackageViewController.m in Sources */,
-				30D946D5209D622600E40E57 /* upper_echelon_strategy.m in Sources */,
 				309819961FC5F8CD00CB19CB /* PackagesOptionsViewController.m in Sources */,
 				30B4D6DE1FDA240D00124267 /* strategy_control.m in Sources */,
 				30B4D7D41FDB8EA200124267 /* post_exploit.c in Sources */,
@@ -736,8 +744,11 @@
 				305CEBE51FC608B9003B680D /* AddSourceViewController.m in Sources */,
 				30B4D7C61FDB8EA200124267 /* cdhash.c in Sources */,
 				30B4D7CC1FDB8EA200124267 /* oxpc_object.c in Sources */,
+				30B6DA2D20D172C7008BFF78 /* empty_list_kmem.c in Sources */,
 				B0CFEB1A1EEEEDD900310825 /* main.m in Sources */,
 				307FE71520C7638B007AC550 /* multi_path_sploit.c in Sources */,
+				30B6DA2C20D172C7008BFF78 /* empty_list_sploit.c in Sources */,
+				30B6DA2E20D172C7008BFF78 /* empty_list_offsets.m in Sources */,
 				30B4D7CE1FDB8EA200124267 /* oxpc_string.c in Sources */,
 				30D5C0C720A1320B00566A55 /* WidgetObject.m in Sources */,
 				30575C101FFC0E1700DD0EC0 /* BootlogosViewController.m in Sources */,
@@ -766,6 +777,7 @@
 				30F236071FBFB67500EC8799 /* HomeViewController.m in Sources */,
 				303EE04F1FD4D5520008EAA8 /* PasscodeButtonsViewController.m in Sources */,
 				303EE0591FD6331F0008EAA8 /* InfoViewController.m in Sources */,
+				30B6DA3120D17357008BFF78 /* empty_list_strategy.m in Sources */,
 				30B4D7D21FDB8EA200124267 /* minibplist16.c in Sources */,
 				308C00111FCA1529007EF741 /* DisplayViewController.m in Sources */,
 				30B4D7DA1FDB8EA200124267 /* task_ports.c in Sources */,
@@ -888,13 +900,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = HoudiniIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_ENTITLEMENTS = houdini/houdini.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTZQ9BU56B;
+				DEVELOPMENT_TEAM = D34X7XXW5V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/houdini",
@@ -913,7 +925,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3r1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
@@ -925,13 +937,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = HoudiniIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_ENTITLEMENTS = houdini/houdini.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTZQ9BU56B;
+				DEVELOPMENT_TEAM = D34X7XXW5V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/houdini",
@@ -950,7 +962,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3r1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";

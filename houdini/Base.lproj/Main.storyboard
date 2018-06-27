@@ -46,7 +46,7 @@
                                         <rect key="frame" x="81" y="0.0" width="234" height="55.666666666666664"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GFY-nO-koR">
-                                                <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="206.33333333333334" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houdini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmB-6z-rFC">
                                                         <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="30"/>
@@ -54,11 +54,11 @@
                                                         <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
-                                                        <rect key="frame" x="126.33333333333334" y="0.0" width="70" height="30"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 3r1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
+                                                        <rect key="frame" x="126.33333333333334" y="0.0" width="80" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="0.40952354749999997" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="1tx-WQ-aYd"/>
+                                                            <constraint firstAttribute="width" constant="80" id="1tx-WQ-aYd"/>
                                                             <constraint firstAttribute="height" constant="30" id="Fy4-Pl-jgZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -380,7 +380,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zqy-7m-qyZ">
-                                <rect key="frame" x="0.0" y="147" width="375" height="616"/>
+                                <rect key="frame" x="0.0" y="147" width="375" height="582"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="0.51390481651376152" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -514,7 +514,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZPB-uH-Y0x">
-                                <rect key="frame" x="0.0" y="203" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="203" width="375" height="560"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="0.50824254587155959" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -845,7 +845,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6l-fq-0jI">
-                                        <rect key="frame" x="89.333333333333329" y="391" width="196.33333333333337" height="30"/>
+                                        <rect key="frame" x="84.333333333333329" y="391" width="206.33333333333337" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houdini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oe-jv-tJY">
                                                 <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="30"/>
@@ -853,11 +853,11 @@
                                                 <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
-                                                <rect key="frame" x="126.33333333333331" y="0.0" width="70" height="30"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 3r1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
+                                                <rect key="frame" x="126.33333333333331" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="0.40952354753521125" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="ccR-1S-u8j"/>
+                                                    <constraint firstAttribute="width" constant="80" id="ccR-1S-u8j"/>
                                                     <constraint firstAttribute="height" constant="30" id="nF7-Kt-uVt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>

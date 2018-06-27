@@ -21,4 +21,3 @@ This is not meant to be a full jailbreak. I initially created it as a PoC (to le
 If you're interested in taking Houdini to the next level and add more features, go for it.
 
 You might notice that the code base is thousands(-ish) of lines. Why? I turned the PoC into a project that will be used publicly by users and it wasn't the best decision cause it made the code base look very messy. A lot of repeated functions or unnecessary code was added. A clean-up would be nice :)
-

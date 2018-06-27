@@ -138,22 +138,28 @@
 - (IBAction)didChangeDisableSystemUpdatesSwitch:(id)sender {
     
     if (self.disableSystemUpdatesSwitch.on) {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"system_updates_disabled"];
         
-        // chown Downloads to root
-        chosen_strategy.strategy_chown("/var/mobile/Media/Downloads", ROOT_UID, WHEEL_GID);
-        chosen_strategy.strategy_chmod("/var/mobile/Media/Downloads", 000);
-        
-        // show a warning
-        show_alert(self, @"Updates Disabled", @"Make sure to delete any downloaded updates in System Preferences → General → iPhone Storage → iOS → Remove. Note: if you have any AppStore issues, re-enable this option.");
+        show_alert(self, @"Feature disabled", @"This feature has been disabled due to some issues with the AppStore");
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"system_updates_disabled"];
+//
+//        // chown Downloads to root
+//        chosen_strategy.strategy_chown("/var/mobile/Media/Downloads", ROOT_UID, WHEEL_GID);
+//        chosen_strategy.strategy_chmod("/var/mobile/Media/Downloads", 000);
+//
+//        // show a warning
+//        show_alert(self, @"Updates Disabled", @"Make sure to delete any downloaded updates in System Preferences → General → iPhone Storage → iOS → Remove. Note: if you have any AppStore issues, disable this option.");
         
     } else {
 
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"system_updates_disabled"];
         
+        sleep(1);
+
         // chown Downloads back to mobile
         chosen_strategy.strategy_chown("/var/mobile/Media/Downloads", MOBILE_UID, MOBILE_GID);
+
         chosen_strategy.strategy_chmod("/var/mobile/Media/Downloads", 0755);
+
     }
     
 }
