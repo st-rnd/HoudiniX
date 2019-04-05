@@ -1,12 +1,12 @@
-# Houdini (iOS 12-12.1.2) designed for A12 devices
+# Houdini (iOS 12 -> 12.1.4)
+This is not meant to be a full jailbreak. Abraham initially created it as a PoC (to learn about the iOS file system structure and how far we can modify the system without a full jailbreak) but then it turned into a project for everyone to use.
 
-Original by Abraham Masri ([@cheesecakeufo](https://twitter.com/cheesecakeufo)) 
+I (ConorTheDev) have modified it to work with iOS 12 -> 12.1.4!
 
-Exploit by [iBSparkes](https://twitter.com/ibsparkes)
+# Credits
+- [Abraham Masri](https://twitter.com/cheesecakeufo) - Original Houdini for iOS 10 -> 10.3.2 and iOS 11 -> 11.3.1
+- [ConorTheDev](https://twitter.com/ConorTheDev) - Development
+- [Soongyu Kwon](https://twitter.com/iospeterdev) - Development
 
-Powered by [jelbrekLib64e](https://github.com/xSpiral/jelbreakLib64e)
-
-Modified by [ConorTheDev](https://twitter.com/ConorTheDev)
-
-# Does this work on pre-A12 devices?
-Not yet! A12 is a priority at the moment.
+# Download
+Download soon!
