@@ -11,9 +11,9 @@
 
 #include "triple_fetch_strategy.h"
 #include "async_wake_strategy.h"
-//#include "upper_echelon_strategy.h"
 #include "multi_path_strategy.h"
 #include "empty_list_strategy.h"
+#include "machswap_strategy.h"
 #include "strategy_control.h"
 
 strategy chosen_strategy;
@@ -31,6 +31,8 @@ kern_return_t set_exploit_strategy() {
     NSArray *async_wake_versions = @[@"11.0", @"11.0.1", @"11.0.3", @"11.1", @"11.1.2"];
 //    NSArray *multi_path_versions = @[@"11.2", @"11.2.1", @"11.3", @"11.3.1"];
     NSArray *empty_list_versions = @[@"11.2", @"11.2.1", @"11.2.2", @"11.2.5", @"11.2.6", @"11.3", @"11.3.1"];
+    
+    NSArray *machswap_versions = @[@"12.0", @"12.0.1", @"12.1", @"12.1.1", @"12.1.2"];
     
     if ([triple_fetch_versions containsObject:system_version]) {
     
@@ -50,6 +52,12 @@ kern_return_t set_exploit_strategy() {
         
         printf("[INFO]: chose empty_list_strategy!\n");
         chosen_strategy = _empty_list_strategy();
+        return KERN_SUCCESS;
+    }
+    else if ([machswap_versions containsObject:system_version]) {
+        
+        printf("[INFO]: chose machswap!\n");
+        chosen_strategy = _machswap_strategy();
         return KERN_SUCCESS;
     }
 //    else if ([multi_path_versions containsObject:system_version]) {

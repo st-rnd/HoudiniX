@@ -53,6 +53,7 @@ typedef NS_ENUM(NSUInteger, PLWallpaperMode) {
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @property BOOL can_jailbreak;
 @end
@@ -76,6 +77,8 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.image.layer.cornerRadius = 15;
     
     [self.versionLabel setText:[[UIDevice currentDevice] systemVersion]];
 

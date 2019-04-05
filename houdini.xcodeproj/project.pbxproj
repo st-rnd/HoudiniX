@@ -103,6 +103,10 @@
 		B0CFEB1D1EEEEDD900310825 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CFEB1C1EEEEDD900310825 /* AppDelegate.m */; };
 		B0CFEB231EEEEDD900310825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0CFEB211EEEEDD900310825 /* Main.storyboard */; };
 		B0CFEB251EEEEDD900310825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CFEB241EEEEDD900310825 /* Assets.xcassets */; };
+		E1DFC4972257EE65002CD334 /* machswap_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4962257EE65002CD334 /* machswap_strategy.m */; };
+		E1DFC49B2257F297002CD334 /* pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49A2257F297002CD334 /* pwn.m */; };
+		E1DFC49E2257F31C002CD334 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49D2257F31C002CD334 /* offsets.m */; };
+		E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4A32257F7FE002CD334 /* uexploit.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -296,6 +300,16 @@
 		B0CFEB221EEEEDD900310825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0CFEB241EEEEDD900310825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0CFEB291EEEEDD900310825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DFC4952257EE56002CD334 /* machswap_strategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machswap_strategy.h; sourceTree = "<group>"; };
+		E1DFC4962257EE65002CD334 /* machswap_strategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machswap_strategy.m; sourceTree = "<group>"; };
+		E1DFC4992257F28E002CD334 /* pwn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pwn.h; sourceTree = "<group>"; };
+		E1DFC49A2257F297002CD334 /* pwn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pwn.m; sourceTree = "<group>"; };
+		E1DFC49C2257F2B4002CD334 /* offsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = offsets.h; sourceTree = "<group>"; };
+		E1DFC49D2257F31C002CD334 /* offsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
+		E1DFC49F2257F32C002CD334 /* iokit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iokit.h; sourceTree = "<group>"; };
+		E1DFC4A02257F33C002CD334 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		E1DFC4A22257F7E3002CD334 /* powend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = powend.h; sourceTree = "<group>"; };
+		E1DFC4A32257F7FE002CD334 /* uexploit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uexploit.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +362,8 @@
 				30CE8DA520C4654E00D55E13 /* multi_path_strategy.m */,
 				30B6DA3020D17357008BFF78 /* empty_list_strategy.h */,
 				30B6DA2F20D17357008BFF78 /* empty_list_strategy.m */,
+				E1DFC4962257EE65002CD334 /* machswap_strategy.m */,
+				E1DFC4952257EE56002CD334 /* machswap_strategy.h */,
 				308C000D1FCA0F11007EF741 /* utilities */,
 				30777F641FD46F7E0078A18D /* UIImage+Private.h */,
 			);
@@ -584,6 +600,7 @@
 				303EE0541FD62F420008EAA8 /* keypad_button.png */,
 				302A93431FFB424E00B44575 /* custom_hosts */,
 				308EDE681FCCE01700062EEA /* other */,
+				E1DFC4982257F222002CD334 /* machswap */,
 				7543BE7D1FDF5F630006745F /* async_wake */,
 				30B6DA2520D1728F008BFF78 /* empty_list */,
 				307FE70F20C7638B007AC550 /* multi_path */,
@@ -608,6 +625,29 @@
 				B0CFEB191EEEEDD900310825 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1DFC4982257F222002CD334 /* machswap */ = {
+			isa = PBXGroup;
+			children = (
+				E1DFC4A12257F7D9002CD334 /* powend */,
+				E1DFC4992257F28E002CD334 /* pwn.h */,
+				E1DFC49A2257F297002CD334 /* pwn.m */,
+				E1DFC49C2257F2B4002CD334 /* offsets.h */,
+				E1DFC49D2257F31C002CD334 /* offsets.m */,
+				E1DFC49F2257F32C002CD334 /* iokit.h */,
+				E1DFC4A02257F33C002CD334 /* common.h */,
+			);
+			path = machswap;
+			sourceTree = "<group>";
+		};
+		E1DFC4A12257F7D9002CD334 /* powend */ = {
+			isa = PBXGroup;
+			children = (
+				E1DFC4A22257F7E3002CD334 /* powend.h */,
+				E1DFC4A32257F7FE002CD334 /* uexploit.c */,
+			);
+			path = powend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,7 +683,7 @@
 				TargetAttributes = {
 					B0CFEB141EEEEDD900310825 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = D34X7XXW5V;
+						DevelopmentTeam = 469MLTNL8A;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -710,6 +750,7 @@
 				30C1E0E41FCA846500C06609 /* IconsRenamerViewController.m in Sources */,
 				7543BE9F1FDF5F630006745F /* kmem.c in Sources */,
 				30B4D6E01FDA268300124267 /* triple_fetch_strategy.m in Sources */,
+				E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */,
 				3059558E1FBE6EE000542538 /* apps_control.m in Sources */,
 				30F235FE1FBEA5C700EC8799 /* NSData+Reading.m in Sources */,
 				308C000C1FCA0F01007EF741 /* display.m in Sources */,
@@ -740,6 +781,7 @@
 				30F9C2911FCE492C0092516B /* IconsShortcutRenamerViewController.m in Sources */,
 				30F236081FBFB67500EC8799 /* JailbreakViewController.m in Sources */,
 				7543BE9A1FDF5F630006745F /* kcall.c in Sources */,
+				E1DFC49B2257F297002CD334 /* pwn.m in Sources */,
 				7543BE9E1FDF5F630006745F /* kdbg.c in Sources */,
 				305CEBE51FC608B9003B680D /* AddSourceViewController.m in Sources */,
 				30B4D7C61FDB8EA200124267 /* cdhash.c in Sources */,
@@ -771,6 +813,7 @@
 				30B4D7DB1FDB8EA200124267 /* xpc_handshake.c in Sources */,
 				30B4D7D61FDB8EA200124267 /* remote_file.c in Sources */,
 				30D5C0C0209FEA0000566A55 /* WidgetsViewController.m in Sources */,
+				E1DFC4972257EE65002CD334 /* machswap_strategy.m in Sources */,
 				304C1AA41FC747B3005AF293 /* packages_control.m in Sources */,
 				30F2360D1FBFC92800EC8799 /* package.m in Sources */,
 				7543BE9D1FDF5F630006745F /* symbols.c in Sources */,
@@ -780,6 +823,7 @@
 				30B6DA3120D17357008BFF78 /* empty_list_strategy.m in Sources */,
 				30B4D7D21FDB8EA200124267 /* minibplist16.c in Sources */,
 				308C00111FCA1529007EF741 /* DisplayViewController.m in Sources */,
+				E1DFC49E2257F31C002CD334 /* offsets.m in Sources */,
 				30B4D7DA1FDB8EA200124267 /* task_ports.c in Sources */,
 				30D5C0BA209FB3BA00566A55 /* BlankIconsViewController.m in Sources */,
 				307FE71620C7638B007AC550 /* multi_path_offsets.m in Sources */,
@@ -906,7 +950,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D34X7XXW5V;
+				DEVELOPMENT_TEAM = 469MLTNL8A;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/houdini",
@@ -925,11 +969,12 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3r1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64 arm64e";
 			};
 			name = Debug;
 		};
@@ -943,7 +988,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D34X7XXW5V;
+				DEVELOPMENT_TEAM = 469MLTNL8A;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/houdini",
@@ -962,11 +1007,12 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cheesecakeufo.houdinib3r1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64 arm64e";
 			};
 			name = Release;
 		};

