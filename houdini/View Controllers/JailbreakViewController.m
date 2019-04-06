@@ -141,7 +141,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
         
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Warning"
-                                     message:@"it seems like you are using a modified version of HoudiniXII which might be unsafe. Get HoudiniXII from (web site)"
+                                     message:@"it seems like you are using a modified version of HoudiniX which might be unsafe. Get HoudiniX from (web site)"
                                      preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* quitButton = [UIAlertAction actionWithTitle:@"Quit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {

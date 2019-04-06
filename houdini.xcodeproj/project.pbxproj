@@ -107,6 +107,9 @@
 		E1DFC49B2257F297002CD334 /* pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49A2257F297002CD334 /* pwn.m */; };
 		E1DFC49E2257F31C002CD334 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49D2257F31C002CD334 /* offsets.m */; };
 		E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4A32257F7FE002CD334 /* uexploit.c */; };
+		E1E2ABF522590777001B4CB5 /* machswap2_pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABF422590777001B4CB5 /* machswap2_pwn.m */; };
+		E1E2ABF9225907C1001B4CB5 /* machswap_offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABF8225907C1001B4CB5 /* machswap_offsets.m */; };
+		E1E2ABFB2259081B001B4CB5 /* machswap_pwn_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABFA2259081B001B4CB5 /* machswap_pwn_strategy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -312,6 +315,12 @@
 		E1DFC4A32257F7FE002CD334 /* uexploit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uexploit.c; sourceTree = "<group>"; };
 		E1E2ABED2258EA1C001B4CB5 /* qilin12.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin12.o; path = ../../Downloads/qilin12.o; sourceTree = "<group>"; };
 		E1E2ABEF2258EA51001B4CB5 /* qilin.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin.o; path = ../../Downloads/qilin.o; sourceTree = "<group>"; };
+		E1E2ABF422590777001B4CB5 /* machswap2_pwn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machswap2_pwn.m; sourceTree = "<group>"; };
+		E1E2ABF622590788001B4CB5 /* machswap2_pwn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machswap2_pwn.h; sourceTree = "<group>"; };
+		E1E2ABF7225907A9001B4CB5 /* machswap_offsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machswap_offsets.h; sourceTree = "<group>"; };
+		E1E2ABF8225907C1001B4CB5 /* machswap_offsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machswap_offsets.m; sourceTree = "<group>"; };
+		E1E2ABFA2259081B001B4CB5 /* machswap_pwn_strategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machswap_pwn_strategy.m; sourceTree = "<group>"; };
+		E1E2ABFC2259082D001B4CB5 /* machswap_pwn_strategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = machswap_pwn_strategy.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +375,8 @@
 				30B6DA2F20D17357008BFF78 /* empty_list_strategy.m */,
 				E1DFC4962257EE65002CD334 /* machswap_strategy.m */,
 				E1DFC4952257EE56002CD334 /* machswap_strategy.h */,
+				E1E2ABFA2259081B001B4CB5 /* machswap_pwn_strategy.m */,
+				E1E2ABFC2259082D001B4CB5 /* machswap_pwn_strategy.h */,
 				308C000D1FCA0F11007EF741 /* utilities */,
 				30777F641FD46F7E0078A18D /* UIImage+Private.h */,
 			);
@@ -604,6 +615,7 @@
 				303EE0541FD62F420008EAA8 /* keypad_button.png */,
 				302A93431FFB424E00B44575 /* custom_hosts */,
 				308EDE681FCCE01700062EEA /* other */,
+				E1E2ABF32259074C001B4CB5 /* machswap_pwn */,
 				E1DFC4982257F222002CD334 /* machswap */,
 				7543BE7D1FDF5F630006745F /* async_wake */,
 				30B6DA2520D1728F008BFF78 /* empty_list */,
@@ -652,6 +664,17 @@
 				E1DFC4A32257F7FE002CD334 /* uexploit.c */,
 			);
 			path = powend;
+			sourceTree = "<group>";
+		};
+		E1E2ABF32259074C001B4CB5 /* machswap_pwn */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2ABF422590777001B4CB5 /* machswap2_pwn.m */,
+				E1E2ABF622590788001B4CB5 /* machswap2_pwn.h */,
+				E1E2ABF7225907A9001B4CB5 /* machswap_offsets.h */,
+				E1E2ABF8225907C1001B4CB5 /* machswap_offsets.m */,
+			);
+			path = machswap_pwn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,6 +792,7 @@
 				30F235FA1FBEA4B600EC8799 /* binary_control.m in Sources */,
 				30B4D7D51FDB8EA200124267 /* triple_fetch_remote_call.c in Sources */,
 				30F2360B1FBFBDF600EC8799 /* PackagesViewController.m in Sources */,
+				E1E2ABF522590777001B4CB5 /* machswap2_pwn.m in Sources */,
 				3080454B209E4FD400E9CC6F /* ControlCenterViewController.m in Sources */,
 				30575C121FFC288700DD0EC0 /* IamAnimojiViewController.m in Sources */,
 				30B4D7CF1FDB8EA200124267 /* oxpc_uint64.c in Sources */,
@@ -800,6 +824,7 @@
 				30575C101FFC0E1700DD0EC0 /* BootlogosViewController.m in Sources */,
 				300DBC701FD252B200A986B9 /* SiriSuggestionsViewController.m in Sources */,
 				7543BE9B1FDF5F630006745F /* find_port.c in Sources */,
+				E1E2ABF9225907C1001B4CB5 /* machswap_offsets.m in Sources */,
 				3096DB731FC4BBB900A74011 /* MainUITabBarViewController.m in Sources */,
 				7543BEA01FDF5F630006745F /* jailbreak.c in Sources */,
 				30B4D7D11FDB8EA200124267 /* oxpc_uuid.c in Sources */,
@@ -826,6 +851,7 @@
 				303EE0591FD6331F0008EAA8 /* InfoViewController.m in Sources */,
 				30B6DA3120D17357008BFF78 /* empty_list_strategy.m in Sources */,
 				30B4D7D21FDB8EA200124267 /* minibplist16.c in Sources */,
+				E1E2ABFB2259081B001B4CB5 /* machswap_pwn_strategy.m in Sources */,
 				308C00111FCA1529007EF741 /* DisplayViewController.m in Sources */,
 				E1DFC49E2257F31C002CD334 /* offsets.m in Sources */,
 				30B4D7DA1FDB8EA200124267 /* task_ports.c in Sources */,
