@@ -230,7 +230,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
                 [self showAlertViewController];
                 return;
             }
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                 
                 // load sources
                 [sender setTitle:@"finishing up..." forState:UIControlStateNormal];
