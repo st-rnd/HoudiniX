@@ -162,7 +162,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
         
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Warning"
-                                     message:@"it seems like you are using a modified version of HoudiniX which might be unsafe. Get HoudiniX from houdinix.conorthedev.com!"
+                                     message:@"It seems like you are using a modified version of HoudiniX which might be unsafe. Get HoudiniX from houdinix.conorthedev.com!"
                                      preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* quitButton = [UIAlertAction actionWithTitle:@"Quit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
@@ -199,7 +199,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
 
 - (IBAction)jailbreakTapped:(id)sender {
     
-    [sender setTitle:@"running.." forState:UIControlStateNormal];
+    [sender setTitle:@"running..." forState:UIControlStateNormal];
     [sender setBackgroundColor: [UIColor colorWithRed:1 green:1 blue:1 alpha:0.0]];
     [sender setTitleColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.6] forState:UIControlStateNormal];
     [sender setEnabled:NO];
@@ -217,7 +217,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
             }
             
             [self.activityIndicator startAnimating];
-            [sender setTitle:@"post-exploitation.." forState:UIControlStateNormal];
+            [sender setTitle:@"post-exploitation..." forState:UIControlStateNormal];
             
             kern_return_t ret = KERN_SUCCESS;
             
@@ -233,11 +233,10 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                 
                 // load sources
-                [sender setTitle:@"finishing up.." forState:UIControlStateNormal];
+                [sender setTitle:@"finishing up..." forState:UIControlStateNormal];
                 
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                     //sources_control_init();
-                
                 
                     UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainUITabBarViewController"];
                     [self presentViewController:homeViewController animated:YES completion:nil];

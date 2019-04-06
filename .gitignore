@@ -5,6 +5,9 @@
 *.lock
 profile
 
+####
+UserInterfaceState.xcuserstate
+
 #####
 # DotEnv files
 .env
