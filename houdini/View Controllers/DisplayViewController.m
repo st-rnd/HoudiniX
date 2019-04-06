@@ -32,6 +32,23 @@ int height = 1334;
     
     
 }
+
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Warning"
+                                 message:@"HoudiniX does NOT recommend changing your screen resolution unless you know what you are doing, by changing your screen resolution you accept that we have no responsibility over what happens to your device."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* quitButton = [UIAlertAction actionWithTitle:@"OK, I understand" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        
+        [alert dismissViewControllerAnimated:true completion:nil];
+        
+    }];
+    
+    [alert addAction:quitButton];
+}
+
 - (IBAction)iPhoneSegmentChanged:(id)sender {
     
     if (self.iPhoneSegmentControl.selectedSegmentIndex == 0) { // 8

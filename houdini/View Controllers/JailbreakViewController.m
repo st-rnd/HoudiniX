@@ -116,6 +116,27 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
         return;
     }
     
+    NSString *system_version = [[UIDevice currentDevice] systemVersion];
+    NSArray *async_wake_versions = @[@"11.0", @"11.0.1", @"11.0.3", @"11.1", @"11.1.2"];
+    if ([async_wake_versions containsObject:system_version]) {
+        self.can_jailbreak = NO;
+        
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Warning"
+                                     message:@"HoudiniX does not support iOS 11 -> 11.1.2 at the moment, we are working on a fix for the exploit used."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* quitButton = [UIAlertAction actionWithTitle:@"Quit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            
+            exit(0);
+            
+        }];
+        
+        [alert addAction:quitButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
     self.can_jailbreak = YES;
 }
 
@@ -141,7 +162,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
         
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Warning"
-                                     message:@"it seems like you are using a modified version of HoudiniX which might be unsafe. Get HoudiniX from (web site)"
+                                     message:@"it seems like you are using a modified version of HoudiniX which might be unsafe. Get HoudiniX from houdinix.conorthedev.com!"
                                      preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* quitButton = [UIAlertAction actionWithTitle:@"Quit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
@@ -150,7 +171,7 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
             
         }];
         
-        UIAlertAction* confirmButton = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        UIAlertAction* confirmButton = [UIAlertAction actionWithTitle:@"Ignore (unsafe)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
             
             [self jailbreakTapped:self.startButton];
             

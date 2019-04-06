@@ -28,7 +28,7 @@ kern_return_t set_exploit_strategy() {
     
     NSArray *triple_fetch_versions = @[@"10.0", @"10.1", @"10.1.1", @"10.2", @"10.2.1", @"10.3.1"];
 
-    NSArray *async_wake_versions = @[@"11.0", @"11.0.1", @"11.0.3", @"11.1", @"11.1.2"];
+    //NSArray *async_wake_versions = @[@"11.0", @"11.0.1", @"11.0.3", @"11.1", @"11.1.2"];
 //    NSArray *multi_path_versions = @[@"11.2", @"11.2.1", @"11.3", @"11.3.1"];
     NSArray *empty_list_versions = @[@"11.2", @"11.2.1", @"11.2.2", @"11.2.5", @"11.2.6", @"11.3", @"11.3.1"];
     
@@ -57,13 +57,13 @@ kern_return_t set_exploit_strategy() {
         return KERN_SUCCESS;
         
     }
-    else if ([async_wake_versions containsObject:system_version]) {
+    /*else if ([async_wake_versions containsObject:system_version]) {
 
         printf("[INFO]: chose async_wake_strategy!\n");
         chosen_strategy = async_wake_strategy();
         return KERN_SUCCESS;
 
-    }
+    }*/
     else if ([empty_list_versions containsObject:system_version]) {
         
         printf("[INFO]: chose empty_list_strategy!\n");
