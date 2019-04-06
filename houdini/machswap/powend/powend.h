@@ -53,8 +53,9 @@ uint64_t do_get_payload_address(uint64_t *,int *);
 uint64_t mem_search(uint64_t base, const void* data, size_t size);
 void do_leak_payload_address(void);
 void start_exploit(void);
+void start_uexploit(void);
+extern kern_return_t bootstrap_look_up(mach_port_t bp, char *name, mach_port_t *sp);
 int fill_memory_with_user_data(uint64_t target,uint32_t size,uint32_t magic,uint64_t *addr);
-extern kern_return_t ms_bootstrap_look_up(mach_port_t bs, const char *service_name, mach_port_t *service);
 kern_return_t mach_vm_allocate(vm_map_t target, mach_vm_address_t *address, mach_vm_size_t size, int flags);
 /* IOKit */
 extern CFDataRef IOCFSerialize( CFTypeRef object, CFOptionFlags options );

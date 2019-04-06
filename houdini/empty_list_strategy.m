@@ -74,8 +74,6 @@ kern_return_t empty_list_mount_rootfs() {
     return ret;
 }
 
-
-
 // kickstarts the exploit
 kern_return_t empty_list_start () {
     

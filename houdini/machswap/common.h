@@ -13,7 +13,6 @@
 #   define LOG(str, args...) do { NSLog(@"[%s] " str, __func__, ##args); } while(0)
 #endif
 
-extern kern_return_t bootstrap_look_up(mach_port_t bp, char *name, mach_port_t *sp);
 extern mach_port_t mach_reply_port(void);
 extern kern_return_t mach_vm_allocate(task_t task, mach_vm_address_t *addr, mach_vm_size_t size, int flags);
 extern kern_return_t mach_vm_deallocate(task_t task, mach_vm_address_t address, mach_vm_size_t size);

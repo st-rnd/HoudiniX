@@ -43,7 +43,6 @@ kern_return_t machswap_strategy_start () {
     LOG("tfp0: %x", tfp0);
     LOG("kernel base: 0x%llx", kernel_base);
     
-    
     return ret;
 }
 
@@ -51,7 +50,7 @@ kern_return_t machswap_strategy_start () {
 kern_return_t machswap_strategy_post_exploit () {
     kern_return_t ret;
     
-    do_powend();
+    start_uexploit();
     
     if(check_uexploit_success() == 1) {
         ret = KERN_SUCCESS;
