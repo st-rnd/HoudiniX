@@ -107,7 +107,6 @@
 		E1DFC49B2257F297002CD334 /* pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49A2257F297002CD334 /* pwn.m */; };
 		E1DFC49E2257F31C002CD334 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49D2257F31C002CD334 /* offsets.m */; };
 		E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4A32257F7FE002CD334 /* uexploit.c */; };
-		E1E2ABF12258EF42001B4CB5 /* qilin12.o in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2ABED2258EA1C001B4CB5 /* qilin12.o */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -313,7 +312,6 @@
 		E1DFC4A32257F7FE002CD334 /* uexploit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uexploit.c; sourceTree = "<group>"; };
 		E1E2ABED2258EA1C001B4CB5 /* qilin12.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin12.o; path = ../../Downloads/qilin12.o; sourceTree = "<group>"; };
 		E1E2ABEF2258EA51001B4CB5 /* qilin.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin.o; path = ../../Downloads/qilin.o; sourceTree = "<group>"; };
-		E1E2ABF22258EF88001B4CB5 /* QiLin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiLin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,7 +319,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E2ABF12258EF42001B4CB5 /* qilin12.o in Frameworks */,
 				30F9C28E1FCD1A380092516B /* liblzma.5.tbd in Frameworks */,
 				30F9C28C1FCD19DE0092516B /* liblzma.tbd in Frameworks */,
 				308EDE6C1FCCE04400062EEA /* libiconv.2.4.0.tbd in Frameworks */,
@@ -428,7 +425,6 @@
 				308EDE641FCCE00D00062EEA /* archive.h */,
 				308EDE651FCCE00D00062EEA /* bzlib.h */,
 				308EDE661FCCE00D00062EEA /* libarchive-ios.a */,
-				E1E2ABF22258EF88001B4CB5 /* QiLin.h */,
 			);
 			name = other;
 			sourceTree = "<group>";

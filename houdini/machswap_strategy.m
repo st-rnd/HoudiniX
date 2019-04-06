@@ -19,9 +19,6 @@
 #include "machswap/common.h"
 #include "machswap/pwn.h"
 #include "machswap/offsets.h"
-#include "machswap/powend/powend.h"
-
-#include "QiLin.h"
 
 kern_return_t machswap_strategy_start () {
     kern_return_t ret;
