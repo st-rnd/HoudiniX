@@ -7,6 +7,8 @@ I (ConorTheDev) have modified it to work with iOS 12 -> 12.1.2!
 - [Abraham Masri](https://twitter.com/cheesecakeufo) - Original Houdini for iOS 10 -> 10.3.2 and iOS 11 -> 11.3.1
 - [ConorTheDev](https://twitter.com/ConorTheDev) - Development
 - [Soongyu Kwon](https://twitter.com/iospeterdev) - Development
+- [iBSparkes](https://twitter.com/ibsparkes) - machswap (for A7 - A11)
+- [pwn20wnd](https://twitter.com/pwn20wnd) - machswap_pwn (for A12)
 
 # Download
 Download soon!
