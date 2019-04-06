@@ -7,6 +7,7 @@ We have forked it and made it work with iOS 12 (A7 -> A12 Devices)
 - [Abraham Masri](https://twitter.com/cheesecakeufo) - Original Houdini for iOS 10 -> 10.3.2 and iOS 11 -> 11.3.1
 - [ConorTheDev](https://twitter.com/ConorTheDev) - Development
 - [Soongyu Kwon](https://twitter.com/iospeterdev) - Development
+- [axelbyte](https://twitter.com/axelbyte) - Development
 - [iBSparkes](https://twitter.com/ibsparkes) - machswap (for A7 - A11)
 - [pwn20wnd](https://twitter.com/pwn20wnd) - machswap_pwn (for A12)
 - [yasdf007](https://twitter.com/yasdf007) - Testing A12 support
