@@ -135,16 +135,20 @@ bool is_filtered = false;
         Package *emojis = [[Package alloc] initWithName:@"Emojificator" type:@"utilities" short_desc:@"Change Emoji font" url:nil];
         Package *bootlogos = [[Package alloc] initWithName:@"BetterBootLogos" type:@"utilities" short_desc:@"Change the boring Apple bootlogo" url:nil];
         
-        
         [icons_shapes setThumbnail_image:[UIImage imageNamed:@"Shape"]];
         [ads_control setThumbnail_image:[UIImage imageNamed:@"Ads"]];
         [emojis setThumbnail_image:[UIImage imageNamed:@"Emoji"]];
         [bootlogos setThumbnail_image:[UIImage imageNamed:@"BootLogo"]];
         
+        //Disabled until we fix
+        if(![[[UIDevice currentDevice] systemVersion] containsString:@"12"]) {
+            [utilities_list addObject:emojis];
+            [utilities_list addObject:bootlogos];
+        }
+        
         [utilities_list addObject:icons_shapes];
         [utilities_list addObject:ads_control];
-        [utilities_list addObject:emojis];
-        [utilities_list addObject:bootlogos];
+
         
     }
     
