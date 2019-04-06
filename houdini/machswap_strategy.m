@@ -21,6 +21,8 @@
 #include "machswap/offsets.h"
 #include "machswap/powend/powend.h"
 
+#include "QiLin.h"
+
 kern_return_t machswap_strategy_start () {
     kern_return_t ret;
     
@@ -47,19 +49,10 @@ kern_return_t machswap_strategy_start () {
     return ret;
 }
 
-// called after strategy_start - this will unsandbox the applicaton ;)
+// called after strategy_start - check if we are good to continue
 kern_return_t machswap_strategy_post_exploit () {
     kern_return_t ret;
     
-    /*start_uexploit();
-    
-    if(check_uexploit_success() == 1) {
-        ret = KERN_SUCCESS;
-    } else {
-        ret = KERN_FAILURE;
-    }
-    
-    return ret;*/
     if (getuid() != 0)
     {
         ret = KERN_FAILURE;
@@ -71,42 +64,47 @@ kern_return_t machswap_strategy_post_exploit () {
 }
 
 void machswap_strategy_mkdir (char *path) {
+    machswap_strategy_post_exploit();
+    mkdir(path, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 }
-
 
 void machswap_strategy_rename (const char *old, const char *new) {
-
+    machswap_strategy_post_exploit();
+    rename(old, new);
 }
-
 
 void machswap_strategy_unlink (char *path) {
-
+    machswap_strategy_post_exploit();
+    unlink(path);
 }
-
 int machswap_strategy_chown (const char *path, uid_t owner, gid_t group) {
-    
-    return 1;
+    machswap_strategy_post_exploit();
+    int ret = chown(path, owner, group);
+    return ret;
 }
 
 
 int machswap_strategy_chmod (const char *path, mode_t mode) {
-    
-    return 1;
+    machswap_strategy_post_exploit();
+    int ret = chmod(path, mode);
+    return ret;
 }
 
 
 int machswap_strategy_open (const char *path, int oflag, mode_t mode) {
+    machswap_strategy_post_exploit();
+    int fd = open(path, oflag, mode);
     
-    return 1;
+    return fd;
 }
 
 void machswap_strategy_kill (pid_t pid, int sig) {
-
+    kill(pid, sig);
 }
 
 
 void machswap_strategy_reboot () {
-    
+    reboot(0);
 }
 
 pid_t machswap_strategy_pid_for_name(char *name) {

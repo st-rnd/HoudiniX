@@ -115,8 +115,7 @@
 }
 
 - (void)didTapRespring:(UITapGestureRecognizer *)gestureRecognizer {
-
-    uicache(); // two in one :)
+    kill_springboard(SIGKILL);
 }
 
 - (void)didTapReboot:(UITapGestureRecognizer *)gestureRecognizer {
