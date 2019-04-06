@@ -5,6 +5,6 @@
 
 #include "common.h"
 
-kern_return_t exploit(offsets_t *offsets, task_t *tfp0, uint64_t *kbase);
+mach_port_t exploit(machswap_offsets_t *offsets, task_t *tfp0_back, uint64_t *kbase_back);
 
 #endif

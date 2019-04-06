@@ -16,29 +16,26 @@
 #include <pthread.h>
 
 #include "machswap/iokit.h"
-#include "machswap/common.h"
+#include "common.h"
 #include "machswap/pwn.h"
 #include "machswap/offsets.h"
+vm_size_t psize;
+mach_port_t tfp0;
+uint64_t kbase;
+uint64_t kslide;
+uint64_t kernel_base;
 
 kern_return_t machswap_strategy_start () {
     kern_return_t ret;
     
-    offsets_t *offs = get_offsets();
-    if (offs == NULL)
-    {
-        LOG("failed to get offsets!");
-        return KERN_FAILURE;
-    }
-    
-    mach_port_t tfp0;
-    uint64_t kernel_base;
-    ret = exploit(offs, &tfp0, &kernel_base);
+    machswap_offsets_t *machswap_offsets = NULL;
+    machswap_offsets = get_machswap_offsets();
+   ret = exploit(machswap_offsets, &tfp0, &kbase);
     if (ret != KERN_SUCCESS)
     {
         LOG("failed to run exploit: %x %s", ret, mach_error_string(ret));
         return KERN_FAILURE;
     }
-    
     LOG("success!");
     LOG("tfp0: %x", tfp0);
     LOG("kernel base: 0x%llx", kernel_base);

@@ -1,7 +1,8 @@
 #include <errno.h>
 #include <string.h>             // strcmp, strerror
 #include <sys/utsname.h>        // uname
-#include "../machswap/common.h"
+
+#include "common.h"             // LOG, kptr_t
 #include "machswap_offsets.h"
 
 static machswap_offsets_t *machswap_offsets[] =
