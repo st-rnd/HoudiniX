@@ -13,4 +13,4 @@ We have forked it and made it work with iOS 12 (A7 -> A12 Devices)
 - [yasdf007](https://twitter.com/yasdf007) - Testing A12 support
 
 # Download
-Download soon
+[Download here](https://houdinix.conorthedev.com)
