@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <pthread.h>
 
+#include "machswap/iokit.h"
 #include "machswap/common.h"
 #include "machswap/pwn.h"
 #include "machswap/offsets.h"
@@ -50,12 +51,20 @@ kern_return_t machswap_strategy_start () {
 kern_return_t machswap_strategy_post_exploit () {
     kern_return_t ret;
     
-    start_uexploit();
+    /*start_uexploit();
     
     if(check_uexploit_success() == 1) {
         ret = KERN_SUCCESS;
     } else {
         ret = KERN_FAILURE;
+    }
+    
+    return ret;*/
+    if (getuid() != 0)
+    {
+        ret = KERN_FAILURE;
+    } else {
+        ret = KERN_SUCCESS;
     }
     
     return ret;

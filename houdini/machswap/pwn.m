@@ -1526,7 +1526,7 @@ value = value | ((uint64_t)read64_tmp << 32);\
     
     /* de-elevate */
     
-    kwrite64(the_one, ourproc + offsets->struct_offsets.proc_ucred, orig_ucred);
+    /*kwrite64(the_one, ourproc + offsets->struct_offsets.proc_ucred, orig_ucred);
     
     LOG("setuid: %d, uid: %d", setuid(orig_uid), getuid());
     if (getuid() != orig_uid)
@@ -1541,7 +1541,7 @@ value = value | ((uint64_t)read64_tmp << 32);\
     {
         LOG("failed to set hsp4! error: %x %s, port: %x", ret, mach_error_string(ret), hsp4);
         goto out;
-    }
+    }*/
     
     /* test it */
     kbase_val = kread64(hsp4, kernel_base);

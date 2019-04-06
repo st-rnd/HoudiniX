@@ -212,10 +212,10 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                 
                 // load sources
-                [sender setTitle:@"fetching packages.." forState:UIControlStateNormal];
+                [sender setTitle:@"finishing up.." forState:UIControlStateNormal];
                 
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                    sources_control_init();
+                    //sources_control_init();
                 
                 
                     UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainUITabBarViewController"];
