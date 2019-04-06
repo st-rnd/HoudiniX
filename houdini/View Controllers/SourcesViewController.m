@@ -48,29 +48,12 @@ extern NSMutableArray *sources_list;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     [self.sourcesTableView reloadData];
-    
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Warning"
-                                 message:@"Packages has been disabled on HoudiniX until we verify a few things, stay tuned for an update!"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* confirmButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainUITabBarViewController"];
-        [self presentViewController:homeViewController animated:YES completion:nil];
-        [alert dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
-    [alert addAction:confirmButton];
-    
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 

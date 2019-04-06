@@ -106,7 +106,6 @@
 		E1DFC4972257EE65002CD334 /* machswap_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4962257EE65002CD334 /* machswap_strategy.m */; };
 		E1DFC49B2257F297002CD334 /* pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49A2257F297002CD334 /* pwn.m */; };
 		E1DFC49E2257F31C002CD334 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC49D2257F31C002CD334 /* offsets.m */; };
-		E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */ = {isa = PBXBuildFile; fileRef = E1DFC4A32257F7FE002CD334 /* uexploit.c */; };
 		E1E2ABF522590777001B4CB5 /* machswap2_pwn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABF422590777001B4CB5 /* machswap2_pwn.m */; };
 		E1E2ABF9225907C1001B4CB5 /* machswap_offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABF8225907C1001B4CB5 /* machswap_offsets.m */; };
 		E1E2ABFB2259081B001B4CB5 /* machswap_pwn_strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2ABFA2259081B001B4CB5 /* machswap_pwn_strategy.m */; };
@@ -777,7 +776,6 @@
 				30C1E0E41FCA846500C06609 /* IconsRenamerViewController.m in Sources */,
 				7543BE9F1FDF5F630006745F /* kmem.c in Sources */,
 				30B4D6E01FDA268300124267 /* triple_fetch_strategy.m in Sources */,
-				E1DFC4A42257F7FE002CD334 /* uexploit.c in Sources */,
 				3059558E1FBE6EE000542538 /* apps_control.m in Sources */,
 				30F235FE1FBEA5C700EC8799 /* NSData+Reading.m in Sources */,
 				308C000C1FCA0F01007EF741 /* display.m in Sources */,
