@@ -34,8 +34,6 @@ kern_return_t set_exploit_strategy() {
     
     NSArray *machswap_versions = @[@"11.4", @"11.4.1", @"12.0", @"12.0.1", @"12.1", @"12.1.1", @"12.1.2"];
     
-    NSArray *machswap_pwn_devices = @[@"iPhone11,2", @"iPhone11,4", @"iPhone11,6", @"iPhone11,8", @"iPad8,1", @"iPad8,2", @"iPad8,3", @"iPad8,4", @"iPad8,5", @"iPad8,6", @"iPad8,7", @"iPad8,8"];
-    
     size_t size;
     
     sysctlbyname("hw.machine", NULL, &size, NULL, 0);
@@ -71,15 +69,9 @@ kern_return_t set_exploit_strategy() {
         return KERN_SUCCESS;
     }
     else if ([machswap_versions containsObject:system_version]) {
-        if ([machswap_pwn_devices containsObject:platform]) {
-            printf("[INFO]: chose machswap_pwn!\n");
-            chosen_strategy = _machswap_pwn_strategy();
-            return KERN_SUCCESS;
-        } else {
-            printf("[INFO]: chose machswap2!\n");
-            chosen_strategy = _machswap_strategy();
-            return KERN_SUCCESS;
-        }
+        printf("[INFO]: chose machswap_pwn!\n");
+        chosen_strategy = _machswap_pwn_strategy();
+        return KERN_SUCCESS;
     }
 //    else if ([multi_path_versions containsObject:system_version]) {
 //
