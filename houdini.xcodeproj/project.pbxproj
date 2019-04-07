@@ -678,7 +678,7 @@
 				TargetAttributes = {
 					B0CFEB141EEEEDD900310825 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = YKVUX3BBV5;
+						DevelopmentTeam = 469MLTNL8A;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -943,7 +943,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YKVUX3BBV5;
+				DEVELOPMENT_TEAM = 469MLTNL8A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -963,7 +963,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conorthede.houdini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
@@ -982,7 +982,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YKVUX3BBV5;
+				DEVELOPMENT_TEAM = 469MLTNL8A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1002,7 +1002,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conorthede.houdini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";

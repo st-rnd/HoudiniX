@@ -54,7 +54,7 @@
                                                         <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
                                                         <rect key="frame" x="133.66666666666666" y="0.0" width="80" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="0.40952354749999997" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -865,7 +865,7 @@
                                                 <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
                                                 <rect key="frame" x="149" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="0.40952354753521125" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -1015,9 +1015,9 @@
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="96u-m6-UJ9">
                                             <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
                                         </activityIndicatorView>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcp-Q0-dWo">
+                                        <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcp-Q0-dWo">
                                             <rect key="frame" x="87.666666666666686" y="282.33333333333331" width="200" height="55"/>
-                                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.21377090670000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.21163313356164384" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="A3K-CR-AIX"/>
                                                 <constraint firstAttribute="height" constant="55" id="Whs-F5-wmv"/>
