@@ -163,11 +163,16 @@
         // output path
         NSString *output_path = [NSString stringWithFormat:@"%@/ModuleConfiguration.plist", get_houdini_dir_for_path(@"ControlCenter")];
 
+        NSLog(@"%@", output_path);
+        
         [module_configuration_dict writeToFile:output_path atomically:YES];
 
-        [self.applyButton setTitle:@"respring" forState:UIControlStateNormal];
-
+        NSLog(@"before respring set");
         
+        [self.applyButton setTitle:@"respring" forState:UIControlStateNormal];
+        
+        NSLog(@"after respring set");
+
         // a workaround to write the file before iOS overwrites it
         kill_springboard(SIGSTOP);
 

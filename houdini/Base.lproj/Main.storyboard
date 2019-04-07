@@ -3167,7 +3167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTp-Kr-kIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8128.8000000000002" y="1438.6699507389162"/>
+            <point key="canvasLocation" x="8142" y="1439"/>
         </scene>
         <!--Iam Animoji View Controller-->
         <scene sceneID="HVA-Xs-JRn">

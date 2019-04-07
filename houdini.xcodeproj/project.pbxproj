@@ -18,8 +18,6 @@
 		303EE0591FD6331F0008EAA8 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 303EE0581FD6331F0008EAA8 /* InfoViewController.m */; };
 		304C1AA41FC747B3005AF293 /* packages_control.m in Sources */ = {isa = PBXBuildFile; fileRef = 304C1AA31FC747B3005AF293 /* packages_control.m */; };
 		304C1AA81FC8C6E4005AF293 /* code_sign.m in Sources */ = {isa = PBXBuildFile; fileRef = 304C1AA71FC8C6E4005AF293 /* code_sign.m */; };
-		30575C0E1FFBD23000DD0EC0 /* EmojisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30575C0D1FFBD23000DD0EC0 /* EmojisViewController.m */; };
-		30575C101FFC0E1700DD0EC0 /* BootlogosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30575C0F1FFC0E1700DD0EC0 /* BootlogosViewController.m */; };
 		30575C121FFC288700DD0EC0 /* IamAnimojiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30575C111FFC288700DD0EC0 /* IamAnimojiViewController.m */; };
 		3059558E1FBE6EE000542538 /* apps_control.m in Sources */ = {isa = PBXBuildFile; fileRef = 3059558D1FBE6EE000542538 /* apps_control.m */; };
 		305CEBE01FC6035D003B680D /* SourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 305CEBDF1FC6035D003B680D /* SourcesViewController.m */; };
@@ -144,8 +142,6 @@
 		304C1AA31FC747B3005AF293 /* packages_control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = packages_control.m; path = houdini/packages_control.m; sourceTree = "<group>"; };
 		304C1AA51FC74BCF005AF293 /* packages_control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = packages_control.h; path = houdini/packages_control.h; sourceTree = "<group>"; };
 		304C1AA71FC8C6E4005AF293 /* code_sign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = code_sign.m; path = houdini/code_sign.m; sourceTree = "<group>"; };
-		30575C0D1FFBD23000DD0EC0 /* EmojisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojisViewController.m; sourceTree = "<group>"; };
-		30575C0F1FFC0E1700DD0EC0 /* BootlogosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BootlogosViewController.m; sourceTree = "<group>"; };
 		30575C111FFC288700DD0EC0 /* IamAnimojiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IamAnimojiViewController.m; sourceTree = "<group>"; };
 		3059558D1FBE6EE000542538 /* apps_control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = apps_control.m; path = houdini/apps_control.m; sourceTree = "<group>"; };
 		305955901FBE709B00542538 /* apps_control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = apps_control.h; path = houdini/apps_control.h; sourceTree = "<group>"; };
@@ -405,8 +401,6 @@
 				30DE0A9D1FD7405A0036BA97 /* ColorizeBadgesViewController.m */,
 				302A933D1FFB15D100B44575 /* IconShapesViewController.m */,
 				302A93411FFB3E9B00B44575 /* AdsControlViewController.m */,
-				30575C0D1FFBD23000DD0EC0 /* EmojisViewController.m */,
-				30575C0F1FFC0E1700DD0EC0 /* BootlogosViewController.m */,
 				30575C111FFC288700DD0EC0 /* IamAnimojiViewController.m */,
 				3080454A209E4FD300E9CC6F /* ControlCenterViewController.m */,
 				30D5C0B9209FB3B900566A55 /* BlankIconsViewController.m */,
@@ -806,7 +800,6 @@
 				30B6DA2C20D172C7008BFF78 /* empty_list_sploit.c in Sources */,
 				30B6DA2E20D172C7008BFF78 /* empty_list_offsets.m in Sources */,
 				30B4D7CE1FDB8EA200124267 /* oxpc_string.c in Sources */,
-				30575C101FFC0E1700DD0EC0 /* BootlogosViewController.m in Sources */,
 				300DBC701FD252B200A986B9 /* SiriSuggestionsViewController.m in Sources */,
 				7543BE9B1FDF5F630006745F /* find_port.c in Sources */,
 				E1E2ABF9225907C1001B4CB5 /* machswap_offsets.m in Sources */,
@@ -842,7 +835,6 @@
 				307FE71620C7638B007AC550 /* multi_path_offsets.m in Sources */,
 				305CEBE31FC60550003B680D /* source.m in Sources */,
 				305CEBE01FC6035D003B680D /* SourcesViewController.m in Sources */,
-				30575C0E1FFBD23000DD0EC0 /* EmojisViewController.m in Sources */,
 				30B4D7D01FDB8EA200124267 /* oxpc_utils.c in Sources */,
 				30B4D7D71FDB8EA200124267 /* remote_memory.c in Sources */,
 			);

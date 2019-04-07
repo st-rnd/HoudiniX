@@ -111,7 +111,7 @@ bool is_filtered = false;
     [utilities_list addObject:colorize_badges];
     [utilities_list addObject:icons_renamer];
     [utilities_list addObject:icons_shortcut_renamer];
-    [utilities_list addObject:themes];
+    //[utilities_list addObject:themes];
     //[utilities_list addObject:passcode_buttons];
     //[utilities_list addObject:control_center_modules];
     [utilities_list addObject:blank_icons];
@@ -130,24 +130,12 @@ bool is_filtered = false;
             
         Package *icons_shapes = [[Package alloc] initWithName:@"Icon Shapes" type:@"utilities" short_desc:@"Change icons shapes!" url:nil];
         Package *ads_control = [[Package alloc] initWithName:@"Ads Blocker" type:@"utilities" short_desc:@"Block ads system-wide" url:nil];
-        Package *emojis = [[Package alloc] initWithName:@"Emojificator" type:@"utilities" short_desc:@"Change Emoji font" url:nil];
-        Package *bootlogos = [[Package alloc] initWithName:@"BetterBootLogos" type:@"utilities" short_desc:@"Change the boring Apple bootlogo" url:nil];
         
         [icons_shapes setThumbnail_image:[UIImage imageNamed:@"Shape"]];
         [ads_control setThumbnail_image:[UIImage imageNamed:@"Ads"]];
-        [emojis setThumbnail_image:[UIImage imageNamed:@"Emoji"]];
-        [bootlogos setThumbnail_image:[UIImage imageNamed:@"BootLogo"]];
         
-        //Disabled until we fix
-        if(![[[UIDevice currentDevice] systemVersion] containsString:@"12"]) {
-            [utilities_list addObject:bootlogos];
-        }
-        
-        [utilities_list addObject:emojis];
         //[utilities_list addObject:icons_shapes];
         [utilities_list addObject:ads_control];
-
-        
     }
     
     // iPhone X packages - only
