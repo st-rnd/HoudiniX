@@ -3,6 +3,9 @@ This is not meant to be a full jailbreak. Abraham initially created it as a PoC 
 
 We have forked it and made it work with iOS 12 (A7 -> A12 Devices)
 
+# Warning
+HoudiniX may make changes to your device that can be dangerous, use at your own risk.
+
 # Credits
 - [Abraham Masri](https://twitter.com/cheesecakeufo) - Original Houdini for iOS 10 -> 10.3.2 and iOS 11 -> 11.3.1
 - [ConorTheDev](https://twitter.com/ConorTheDev) - Development
