@@ -527,3 +527,29 @@ void show_alert(UIViewController *view_controller, NSString *title, NSString *me
     [view_controller presentViewController:alert animated:true completion:nil];
     
 }
+
+bool is_symlink(const char *filename) {
+    struct stat buf;
+    if (lstat(filename, &buf) != ERR_SUCCESS) {
+        return false;
+    }
+    return S_ISLNK(buf.st_mode);
+}
+
+bool ensure_symlink(const char *to, const char *from) {
+    ssize_t wantedLength = strlen(to);
+    ssize_t maxLen = wantedLength + 1;
+    char link[maxLen];
+    ssize_t linkLength = readlink(from, link, sizeof(link));
+    if (linkLength != wantedLength ||
+        strncmp(link, to, maxLen) != ERR_SUCCESS
+        ) {
+        if (!clean_file(from)) {
+            return false;
+        }
+        if (symlink(to, from) != ERR_SUCCESS) {
+            return false;
+        }
+    }
+    return true;
+}
