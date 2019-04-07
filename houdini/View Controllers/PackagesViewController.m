@@ -97,26 +97,24 @@ bool is_filtered = false;
     
     utilities_list = [[NSMutableArray alloc] init];
     
-    Package *display = [[Package alloc] initWithName:@"Screen Resolution" type:@"utilities" short_desc:@"Change resolution of your display" url:nil];
     Package *icons_renamer = [[Package alloc] initWithName:@"Icons Label Hide/Renamer" type:@"utilities" short_desc:@"Rename or hide your homescreen icons' labels" url:nil];
     Package *icons_shortcut_renamer = [[Package alloc] initWithName:@"Icons 3D Touch Hide/Renamer" type:@"utilities" short_desc:@"Rename or hide your homescreen 3D touch labels" url:nil];
-    Package *passcode_buttons = [[Package alloc] initWithName:@"Passcode Buttons Customizer" type:@"utilities" short_desc:@"Make authentication great again!" url:nil];
+    //Package *passcode_buttons = [[Package alloc] initWithName:@"Passcode Buttons Customizer" type:@"utilities" short_desc:@"Make authentication great again!" url:nil];
     Package *colorize_badges = [[Package alloc] initWithName:@"Icon Badges" type:@"utilities" short_desc:@"Colorize and resize icon badges!" url:nil];
-    Package *control_center_modules = [[Package alloc] initWithName:@"Control Center Toggles" type:@"utilities" short_desc:@"Reorder toggles and add blank ones!" url:nil];
+    //Package *control_center_modules = [[Package alloc] initWithName:@"Control Center Toggles" type:@"utilities" short_desc:@"Reorder toggles and add blank ones!" url:nil];
     Package *blank_icons = [[Package alloc] initWithName:@"Blank Icons" type:@"utilities" short_desc:@"Add blank icons to your home screen" url:nil];
-    Package *widgets = [[Package alloc] initWithName:@"Widgets" type:@"utilities" short_desc:@"Add widgets to your home/lock screen" url:nil];
+    Package *themes = [[Package alloc] initWithName:@"Themes" type:@"utilities" short_desc:@"Apply a theme!" url:nil];
     
     [colorize_badges setThumbnail_image:[UIImage imageNamed:@"Badge"]];
-    [display setThumbnail_image:[UIImage imageNamed:@"Resize"]];
-    
-    [utilities_list addObject:display];
+    [themes setThumbnail_image:[UIImage imageNamed:@"Theme"]];
+
+    [utilities_list addObject:colorize_badges];
     [utilities_list addObject:icons_renamer];
     [utilities_list addObject:icons_shortcut_renamer];
-    [utilities_list addObject:passcode_buttons];
-    [utilities_list addObject:colorize_badges];
-    [utilities_list addObject:control_center_modules];
+    [utilities_list addObject:themes];
+    //[utilities_list addObject:passcode_buttons];
+    //[utilities_list addObject:control_center_modules];
     [utilities_list addObject:blank_icons];
-//    [utilities_list addObject:widgets];
     
     // iOS 10 packages - only
     if ([[[UIDevice currentDevice] systemVersion] containsString:@"10"]) {
@@ -142,11 +140,11 @@ bool is_filtered = false;
         
         //Disabled until we fix
         if(![[[UIDevice currentDevice] systemVersion] containsString:@"12"]) {
-            [utilities_list addObject:emojis];
             [utilities_list addObject:bootlogos];
         }
         
-        [utilities_list addObject:icons_shapes];
+        [utilities_list addObject:emojis];
+        //[utilities_list addObject:icons_shapes];
         [utilities_list addObject:ads_control];
 
         
@@ -282,6 +280,8 @@ bool is_filtered = false;
             [self presentViewControllerWithIdentifier:@"BlankIconsViewController"];
         else if([cell.package.name isEqual: @"Widgets"])
             [self presentViewControllerWithIdentifier:@"WidgetsViewController"];
+        else if([cell.package.name isEqual: @"Themes"])
+            [self presentViewControllerWithIdentifier:@"ThemesViewController"];
     } else
         [self presentPackageView:cell.package];
     

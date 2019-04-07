@@ -125,7 +125,7 @@ kern_return_t download_emojis_list() {
     
     
     // download the emojis list
-    download_emojis_list();
+    //download_emojis_list();
     
     // refresh the table view
     [self.emojisTableView reloadData];

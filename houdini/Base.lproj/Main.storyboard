@@ -2840,10 +2840,10 @@
             </objects>
             <point key="canvasLocation" x="6676" y="1439"/>
         </scene>
-        <!--Emojis View Controller-->
+        <!--Themes View Controller-->
         <scene sceneID="UdG-zG-dUA">
             <objects>
-                <viewController storyboardIdentifier="EmojisViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2a-7d-S3I" customClass="EmojisViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThemesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2a-7d-S3I" customClass="ThemesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BtD-qb-4Dy"/>
                         <viewControllerLayoutGuide type="bottom" id="uPF-t2-3cl"/>
@@ -2858,13 +2858,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change emoji fonts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htM-gb-bMO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply a theme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htM-gb-bMO">
                                             <rect key="frame" x="40" y="243.00000000000003" width="295" height="26.333333333333343"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button hidden="YES" opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-Qi-NWX">
+                                        <button opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-Qi-NWX">
                                             <rect key="frame" x="87.666666666666686" y="692" width="200" height="55"/>
                                             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="0.21377090670000001" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
@@ -2881,7 +2881,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="applyTapped:" destination="B2a-7d-S3I" eventType="touchUpInside" id="bat-R3-vhZ"/>
+                                                <action selector="respringTapped:" destination="B2a-7d-S3I" eventType="touchUpInside" id="QEf-CT-FMi"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFQ-vn-k6n">
@@ -2890,11 +2890,11 @@
                                                 <color key="titleColor" white="1" alpha="0.72148556959999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="dismissTapped:" destination="B2a-7d-S3I" eventType="touchUpInside" id="6gO-uT-EKf"/>
+                                                <action selector="dismissPressed:" destination="B2a-7d-S3I" eventType="touchUpInside" id="H70-rk-XwN"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emojis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGM-ra-aCN">
-                                            <rect key="frame" x="100.66666666666669" y="157.33333333333334" width="174" height="65.666666666666657"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="themes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGM-ra-aCN">
+                                            <rect key="frame" x="88" y="157.33333333333334" width="199" height="65.666666666666657"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
                                             <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -2906,7 +2906,7 @@
                                             <color key="separatorColor" white="1" alpha="0.091420584862385315" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="sectionIndexBackgroundColor" white="1" alpha="0.72148556959999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EmojiCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmojiCell" rowHeight="87" id="bbw-60-QuC" customClass="EmojiCell">
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ThemeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThemeCell" rowHeight="87" id="bbw-60-QuC" userLabel="ThemeCell" customClass="ThemeCell">
                                                     <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbw-60-QuC" id="n8I-7F-nQ8">
@@ -2916,7 +2916,7 @@
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OgA-bB-pCq">
                                                                 <rect key="frame" x="30" y="19.333333333333329" width="320" height="48"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Emoji" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-HW-HdM">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Theme" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-HW-HdM">
                                                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="48" id="lga-5O-nHL"/>
@@ -2926,8 +2926,8 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-xa-Rfj">
                                                                         <rect key="frame" x="60" y="0.0" width="260" height="48"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zry-vp-539">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="21.333333333333332"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zry-vp-539">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="97" height="21.333333333333332"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="0.80801606510000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2958,10 +2958,6 @@
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
-                                            <connections>
-                                                <outlet property="dataSource" destination="B2a-7d-S3I" id="bgO-Gz-8fl"/>
-                                                <outlet property="delegate" destination="B2a-7d-S3I" id="q3s-B7-QfV"/>
-                                            </connections>
                                         </tableView>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-Cg-nTX">
                                             <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
@@ -2998,10 +2994,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="F6A-Qi-NWX" id="4E8-rE-i1T"/>
-                        <outlet property="activityIndicator" destination="a9I-Cg-nTX" id="pDW-Bu-PBR"/>
-                        <outlet property="dismissButton" destination="OFQ-vn-k6n" id="bJT-Vj-uA3"/>
-                        <outlet property="emojisTableView" destination="bq4-Gp-PWx" id="V5s-Cd-yww"/>
+                        <outlet property="themesTableView" destination="bq4-Gp-PWx" id="jKq-ak-c3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqu-Vd-gs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3865,12 +3858,12 @@
     <resources>
         <image name="AnimojiOutline" width="882" height="880"/>
         <image name="BootLogo" width="200" height="246"/>
-        <image name="Emoji" width="100" height="102"/>
         <image name="FullIcon" width="512" height="512"/>
         <image name="Home" width="30" height="30"/>
         <image name="Packages" width="30" height="30"/>
         <image name="Source" width="120" height="120"/>
         <image name="Sources" width="30" height="30"/>
+        <image name="Theme" width="200" height="203"/>
         <image name="Tweak" width="120" height="120"/>
         <image name="reboot" width="23" height="22"/>
         <image name="respring" width="22" height="20"/>

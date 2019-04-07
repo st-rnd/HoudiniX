@@ -205,8 +205,8 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
     [sender setEnabled:NO];
     
     // try to run the exploit
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void){
-        
+    dispatch_async(dispatch_get_main_queue(), ^{
+
         kern_return_t ret = chosen_strategy.strategy_start();
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -230,12 +230,13 @@ mach_port_t passed_priv_port = MACH_PORT_NULL;
                 [self showAlertViewController];
                 return;
             }
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                
-                // load sources
+            //Do some final things
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [sender setTitle:@"finishing up..." forState:UIControlStateNormal];
                 
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // reload sources
+                    // yea thats broken let's not
                     //sources_control_init();
                 
                     UIViewController *homeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainUITabBarViewController"];

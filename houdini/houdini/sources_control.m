@@ -159,10 +159,10 @@ void sources_control_init() {
     // default sources (shouldn't be here but eh)
     if([sources_list count] <= 0) {
         Source *modmyi_source = [[Source alloc] init];
-        modmyi_source.name = @"ModMyi (Archive)";
-        modmyi_source.desc = @"ModMyi.com - they hosted your apps!";
-        modmyi_source.url = @"http://apt.modmyi.com/dists/stable/";
-        modmyi_source.packages_url = @"http://apt.modmyi.com/dists/stable/main/binary-iphoneos-arm/Packages";
+        modmyi_source.name = @"ConorTheDev";
+        modmyi_source.desc = @"The home for ConorTheDev's tweaks and themes";
+        modmyi_source.url = @"http://repo.conorthedev.com";
+        modmyi_source.packages_url = @"http://repo.conorthedev.com/Packages";
     
         [sources_list addObject:modmyi_source];
     }
