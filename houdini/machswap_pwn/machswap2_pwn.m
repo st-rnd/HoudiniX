@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-#include "../machswap/common.h"
+#include "common.h"
 #include "machswap2_pwn.h"
 #include "../machswap/iokit.h"
 

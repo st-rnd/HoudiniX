@@ -298,8 +298,6 @@
 		E1DFC49D2257F31C002CD334 /* offsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
 		E1DFC49F2257F32C002CD334 /* iokit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iokit.h; sourceTree = "<group>"; };
 		E1DFC4A02257F33C002CD334 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		E1DFC4A22257F7E3002CD334 /* powend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = powend.h; sourceTree = "<group>"; };
-		E1DFC4A32257F7FE002CD334 /* uexploit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uexploit.c; sourceTree = "<group>"; };
 		E1E2ABED2258EA1C001B4CB5 /* qilin12.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin12.o; path = ../../Downloads/qilin12.o; sourceTree = "<group>"; };
 		E1E2ABEF2258EA51001B4CB5 /* qilin.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = qilin.o; path = ../../Downloads/qilin.o; sourceTree = "<group>"; };
 		E1E2ABF422590777001B4CB5 /* machswap2_pwn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = machswap2_pwn.m; sourceTree = "<group>"; };
@@ -594,6 +592,7 @@
 				30D946DA209D62BD00E40E57 /* houdini.entitlements */,
 				303EE0541FD62F420008EAA8 /* keypad_button.png */,
 				302A93431FFB424E00B44575 /* custom_hosts */,
+				E1DFC4A02257F33C002CD334 /* common.h */,
 				308EDE681FCCE01700062EEA /* other */,
 				E1E2ABF32259074C001B4CB5 /* machswap_pwn */,
 				E1DFC4982257F222002CD334 /* machswap */,
@@ -626,24 +625,13 @@
 		E1DFC4982257F222002CD334 /* machswap */ = {
 			isa = PBXGroup;
 			children = (
-				E1DFC4A12257F7D9002CD334 /* powend */,
 				E1DFC4992257F28E002CD334 /* pwn.h */,
 				E1DFC49A2257F297002CD334 /* pwn.m */,
 				E1DFC49C2257F2B4002CD334 /* offsets.h */,
 				E1DFC49D2257F31C002CD334 /* offsets.m */,
 				E1DFC49F2257F32C002CD334 /* iokit.h */,
-				E1DFC4A02257F33C002CD334 /* common.h */,
 			);
 			path = machswap;
-			sourceTree = "<group>";
-		};
-		E1DFC4A12257F7D9002CD334 /* powend */ = {
-			isa = PBXGroup;
-			children = (
-				E1DFC4A22257F7E3002CD334 /* powend.h */,
-				E1DFC4A32257F7FE002CD334 /* uexploit.c */,
-			);
-			path = powend;
 			sourceTree = "<group>";
 		};
 		E1E2ABF32259074C001B4CB5 /* machswap_pwn */ = {
@@ -690,7 +678,7 @@
 				TargetAttributes = {
 					B0CFEB141EEEEDD900310825 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 469MLTNL8A;
+						DevelopmentTeam = YKVUX3BBV5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -720,6 +708,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -954,7 +943,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 469MLTNL8A;
+				DEVELOPMENT_TEAM = YKVUX3BBV5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -974,7 +963,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthede.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
@@ -993,7 +982,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 469MLTNL8A;
+				DEVELOPMENT_TEAM = YKVUX3BBV5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1013,7 +1002,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conorthedev.houdini;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conorthede.houdini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";

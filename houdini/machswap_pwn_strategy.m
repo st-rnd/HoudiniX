@@ -16,7 +16,7 @@
 #include <pthread.h>
 
 #include "machswap/iokit.h"
-#include "machswap/common.h"
+#include "common.h"
 #include "machswap_pwn/machswap2_pwn.h"
 #include "machswap_pwn/machswap_offsets.h"
 

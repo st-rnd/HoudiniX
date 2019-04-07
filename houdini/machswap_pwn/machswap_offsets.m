@@ -1,7 +1,7 @@
 #include <errno.h>
 #include <string.h>             // strcmp, strerror
 #include <sys/utsname.h>        // uname
-#include "../machswap/common.h"
+#include "common.h"
 #include "machswap_offsets.h"
 
 static machswap_offsets_t *machswap_offsets[] =
