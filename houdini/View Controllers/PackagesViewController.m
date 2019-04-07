@@ -99,9 +99,7 @@ bool is_filtered = false;
     
     Package *icons_renamer = [[Package alloc] initWithName:@"Icons Label Hide/Renamer" type:@"utilities" short_desc:@"Rename or hide your homescreen icons' labels" url:nil];
     Package *icons_shortcut_renamer = [[Package alloc] initWithName:@"Icons 3D Touch Hide/Renamer" type:@"utilities" short_desc:@"Rename or hide your homescreen 3D touch labels" url:nil];
-    //Package *passcode_buttons = [[Package alloc] initWithName:@"Passcode Buttons Customizer" type:@"utilities" short_desc:@"Make authentication great again!" url:nil];
     Package *colorize_badges = [[Package alloc] initWithName:@"Icon Badges" type:@"utilities" short_desc:@"Colorize and resize icon badges!" url:nil];
-    //Package *control_center_modules = [[Package alloc] initWithName:@"Control Center Toggles" type:@"utilities" short_desc:@"Reorder toggles and add blank ones!" url:nil];
     Package *blank_icons = [[Package alloc] initWithName:@"Blank Icons" type:@"utilities" short_desc:@"Add blank icons to your home screen" url:nil];
     Package *themes = [[Package alloc] initWithName:@"Themes" type:@"utilities" short_desc:@"Apply a theme!" url:nil];
     
@@ -111,9 +109,14 @@ bool is_filtered = false;
     [utilities_list addObject:colorize_badges];
     [utilities_list addObject:icons_renamer];
     [utilities_list addObject:icons_shortcut_renamer];
+    //Requires rootFS remount which we don't have on iOS 12, so disabled for now.
+    if (![[[UIDevice currentDevice] systemVersion] containsString:@"12"]) {
+        Package *control_center_modules = [[Package alloc] initWithName:@"Control Center Toggles" type:@"utilities" short_desc:@"Reorder toggles and add blank ones!" url:nil];
+        Package *passcode_buttons = [[Package alloc] initWithName:@"Passcode Buttons Customizer" type:@"utilities" short_desc:@"Make authentication great again!" url:nil];
+        [utilities_list addObject:passcode_buttons];
+        [utilities_list addObject:control_center_modules];
+    }
     //[utilities_list addObject:themes];
-    //[utilities_list addObject:passcode_buttons];
-    //[utilities_list addObject:control_center_modules];
     [utilities_list addObject:blank_icons];
     
     // iOS 10 packages - only
@@ -134,7 +137,10 @@ bool is_filtered = false;
         [icons_shapes setThumbnail_image:[UIImage imageNamed:@"Shape"]];
         [ads_control setThumbnail_image:[UIImage imageNamed:@"Ads"]];
         
-        //[utilities_list addObject:icons_shapes];
+        //Requires rootFS remount which we don't have on iOS 12, so disabled for now.
+        if (![[[UIDevice currentDevice] systemVersion] containsString:@"12"]) {
+            [utilities_list addObject:icons_shapes];
+        }
         [utilities_list addObject:ads_control];
     }
     
