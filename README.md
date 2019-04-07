@@ -8,9 +8,8 @@ We have forked it and made it work with iOS 12 (A7 -> A12 Devices)
 - [ConorTheDev](https://twitter.com/ConorTheDev) - Development
 - [Soongyu Kwon](https://twitter.com/iospeterdev) - Development
 - [axelbyte](https://twitter.com/axelbyte) - Development
-- [iBSparkes](https://twitter.com/ibsparkes) - machswap (for A7 - A11)
-- [pwn20wnd](https://twitter.com/pwn20wnd) - machswap_pwn (for A12)
+- [pwn20wnd](https://twitter.com/pwn20wnd) - machswap_pwn
 - [yasdf007](https://twitter.com/yasdf007) - Testing A12 support
 
 # Download
-Download soon
+[Download here](https://houdinix.conorthedev.com)

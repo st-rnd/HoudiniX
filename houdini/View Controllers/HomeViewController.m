@@ -20,6 +20,7 @@
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *deviceModelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *osVersionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *blockCheckerLabel;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *appcCountLabel;
@@ -32,7 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIView *respringView;
 @property (weak, nonatomic) IBOutlet UIView *rebootView;
 @property (weak, nonatomic) IBOutlet UIView *clearSpaceView;
-@property (weak, nonatomic) IBOutlet UISwitch *disableSystemUpdatesSwitch;
+@property (weak, nonatomic) IBOutlet UIView *blockRevokeView;
 
 
 @end
@@ -49,6 +50,25 @@
                                           countStyle:NSByteCountFormatterCountStyleFile];
 }
 
+- (bool)isBlocked {
+    int blocked = 0;
+    NSArray <NSString *> *array = @[@"/var/Keychains/ocspcache.sqlite3",
+                                    @"/var/Keychains/ocspcache.sqlite3-shm",
+                                    @"/var/Keychains/ocspcache.sqlite3-wal"];
+    for (NSString *path in array) {
+        if (is_symlink(path.UTF8String)) {
+            blocked++;
+        } else {
+            return false;
+        }
+    }
+    
+    if (blocked == 3) {
+        return true;
+    }
+    
+    return false;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -85,9 +105,9 @@
     [self.appcCountLabel setHidden:NO];
     [self.availableStorageLabel setHidden:NO];
     [self.spaceInfoIndicator setHidden:YES];
-    
-    // check if we already disabled system updates and set the toggle
-    self.disableSystemUpdatesSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"system_updates_disabled"];
+    if (self.isBlocked) {
+        self.blockCheckerLabel.text = @"Revokes Blocked";
+    }
     
     
     // recognize taps
@@ -106,6 +126,12 @@
     [self.clearSpaceView addGestureRecognizer:[[UITapGestureRecognizer alloc]
                                              initWithTarget:self
                                              action:@selector(didTapClearSpace:)]];
+    
+    if (![self.blockCheckerLabel.text isEqualToString:@"Revokes Blocked"]) {
+        [self.blockRevokeView addGestureRecognizer:[[UITapGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(didTapBlockRevoke:)]];
+    }
 }
 
 
@@ -133,34 +159,15 @@
     [self presentViewController:packagesOptionsViewController animated:YES completion:nil];
 }
 
-// idea used from Jonathan Levin's tweet: https://twitter.com/Morpheus______/status/942561462450642944
-- (IBAction)didChangeDisableSystemUpdatesSwitch:(id)sender {
-    
-    if (self.disableSystemUpdatesSwitch.on) {
-        
-        show_alert(self, @"Feature disabled", @"This feature has been disabled due to some issues with the AppStore");
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"system_updates_disabled"];
-//
-//        // chown Downloads to root
-//        chosen_strategy.strategy_chown("/var/mobile/Media/Downloads", ROOT_UID, WHEEL_GID);
-//        chosen_strategy.strategy_chmod("/var/mobile/Media/Downloads", 000);
-//
-//        // show a warning
-//        show_alert(self, @"Updates Disabled", @"Make sure to delete any downloaded updates in System Preferences → General → iPhone Storage → iOS → Remove. Note: if you have any AppStore issues, disable this option.");
-        
-    } else {
-
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"system_updates_disabled"];
-        
-        sleep(1);
-
-        // chown Downloads back to mobile
-        chosen_strategy.strategy_chown("/var/mobile/Media/Downloads", MOBILE_UID, MOBILE_GID);
-
-        chosen_strategy.strategy_chmod("/var/mobile/Media/Downloads", 0755);
-
+- (void)didTapBlockRevoke:(UITapGestureRecognizer *)gestureRecognizer {
+    NSArray <NSString *> *array = @[@"/var/Keychains/ocspcache.sqlite3",
+                                    @"/var/Keychains/ocspcache.sqlite3-shm",
+                                    @"/var/Keychains/ocspcache.sqlite3-wal"];
+    for (NSString *path in array) {
+        ensure_symlink("/dev/null", path.UTF8String);
     }
     
+    self.blockCheckerLabel.text = @"Revokes Blocked";
 }
 
 @end

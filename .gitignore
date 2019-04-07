@@ -26,6 +26,8 @@ UserInterfaceState.xcuserstate
 DerivedData/
 build/
 Builds/
+Build/
+Index/
 
 #####
 # Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)

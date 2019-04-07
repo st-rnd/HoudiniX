@@ -687,7 +687,7 @@ NSString * get_file_in_theme_path(NSString *theme_path, NSString *file_name) {
 UIImage *change_image_tint_to(UIImage *src_image, UIColor *color) {
     
     CGRect rect = CGRectMake(0, 0, src_image.size.width, src_image.size.height);
-    UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClipToMask(context, rect, src_image.CGImage);
     CGContextSetFillColorWithColor(context, [color CGColor]);
@@ -972,7 +972,7 @@ UIImage *get_image_for_radius(int radius, int width, int height) {
     
     printf("[INFO]: image for width and height: %d %d\n", width, height);
     CGRect rect = CGRectMake(0, 0, width, height);
-    UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [[UIColor blackColor] CGColor]);
     CGContextFillRect(context, rect);
@@ -986,7 +986,7 @@ UIImage *get_image_for_radius(int radius, int width, int height) {
     image_layer.masksToBounds = YES;
     image_layer.cornerRadius = radius;
     
-    UIGraphicsBeginImageContext(src_image.size);
+    UIGraphicsBeginImageContextWithOptions(src_image.size, NO, 0.0);
     [image_layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *rounded_image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

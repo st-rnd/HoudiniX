@@ -58,4 +58,15 @@ void show_alert(UIViewController *view_controller, NSString *title, NSString *me
 
 void utilities_init(mach_port_t);
 
+static inline bool clean_file(const char *file) {
+    NSString *path = @(file);
+    if ([[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil]) {
+        return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+    return YES;
+}
+
+bool ensure_symlink(const char *to, const char *from);
+bool is_symlink(const char *filename);
+
 #endif /* utilities_h */

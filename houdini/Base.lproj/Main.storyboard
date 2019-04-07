@@ -282,15 +282,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uli-eZ-WZi">
                                                         <rect key="frame" x="10" y="10" width="128.33333333333334" height="90"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TI0-ba-7pJ">
-                                                                <rect key="frame" x="39.666666666666686" y="0.0" width="51" height="42.666666666666664"/>
-                                                                <color key="onTintColor" red="0.14117647058823529" green="0.4823529411764706" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <connections>
-                                                                    <action selector="didChangeDisableSystemUpdatesSwitch:" destination="9pv-A4-QxB" eventType="valueChanged" id="Vmc-ey-No1"/>
-                                                                </connections>
-                                                            </switch>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="disable system updates" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmC-2N-vzZ">
-                                                                <rect key="frame" x="8.6666666666666927" y="47.666666666666629" width="110.66666666666669" height="42.333333333333343"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Blocked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmC-2N-vzZ">
+                                                                <rect key="frame" x="20.666666666666686" y="0.0" width="87" height="42.666666666666664"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.63647983559999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="block revokes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-16-jpA">
+                                                                <rect key="frame" x="14.666666666666693" y="47.666666666666629" width="98.666666666666686" height="42.333333333333343"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.63647983559999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -340,9 +339,10 @@
                         <outlet property="appcCountLabel" destination="Kad-hj-wi3" id="hq0-U7-WTD"/>
                         <outlet property="appsStorageView" destination="pAs-IP-XA4" id="6dy-Tn-LZp"/>
                         <outlet property="availableStorageLabel" destination="9Mg-by-4tj" id="hc1-yQ-Y1w"/>
+                        <outlet property="blockCheckerLabel" destination="OmC-2N-vzZ" id="b2y-th-jXn"/>
+                        <outlet property="blockRevokeView" destination="kkf-D8-cUv" id="ph5-f6-L0K"/>
                         <outlet property="clearSpaceView" destination="9bV-HK-UBq" id="n6g-rK-M3d"/>
                         <outlet property="deviceModelLabel" destination="MQE-Fr-BS7" id="EZK-T7-GgC"/>
-                        <outlet property="disableSystemUpdatesSwitch" destination="TI0-ba-7pJ" id="jIw-wh-hRh"/>
                         <outlet property="osVersionLabel" destination="Jpb-Ep-mle" id="kQ5-Qh-QQg"/>
                         <outlet property="rebootView" destination="9Cc-Bg-Kl3" id="QfS-lo-CIS"/>
                         <outlet property="respringView" destination="XHT-gU-A0a" id="IbN-jM-7Pr"/>
