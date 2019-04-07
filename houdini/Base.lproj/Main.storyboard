@@ -54,7 +54,7 @@
                                                         <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBR-J7-wun">
                                                         <rect key="frame" x="133.66666666666666" y="0.0" width="80" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="0.40952354749999997" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -865,7 +865,7 @@
                                                 <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beta 1r2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER8-g9-ALj">
                                                 <rect key="frame" x="149" y="0.0" width="80" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="0.40952354753521125" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -1413,8 +1413,8 @@
                                             <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning: this might put your device in a boot loop. iPhones only. (NOT tested on iPhone X)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-er-eCc">
-                                            <rect key="frame" x="45" y="607.33333333333337" width="285" height="64.666666666666629"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning: this might put your device in a boot loop)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-er-eCc">
+                                            <rect key="frame" x="45" y="629" width="285" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="0.54832757539999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
